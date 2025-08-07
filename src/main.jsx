@@ -6,7 +6,7 @@ import App from "./App";
 import "./index.css"; // Tailwind-importer
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <BrowserRouter>
+  <BrowserRouter basename="/framerate/">
     <App />
   </BrowserRouter>
 );
