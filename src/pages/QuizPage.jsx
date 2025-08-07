@@ -106,6 +106,7 @@ export default function QuizPage() {
   }, [currentQuestionData]);
 
   const handleLogoIconClick = () => {
+    console.log("Klikk på framework-ikonet!", currentQuestionData);
     if (!currentQuestionData) return;
     const iconInfo = allDisplayIcons.find(
       (iconData) => iconData.name === currentQuestionData.framework

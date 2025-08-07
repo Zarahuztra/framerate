@@ -68,6 +68,7 @@ export default function LessonPage() {
 
   // 4. NYE FUNKSJONER FOR MODALEN
   const handleLogoIconClick = () => {
+    console.log("Klikk på framework-ikonet!", currentLessonData);
     if (!currentLessonData) return;
     const iconInfo = allDisplayIcons.find(
       (iconData) => iconData.name === currentLessonData.framework
