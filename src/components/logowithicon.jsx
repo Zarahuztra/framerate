@@ -55,25 +55,21 @@ export default function LogoWithIcon({
         // Denne gruppen er KUN for posisjonering nå
         <g
           transform={`translate(${xIconContainerStart + 3}, ${iconTranslateY})`}
+          onClick={onIconClick} // <-- Flytt hit!
+          style={{ cursor: "pointer" }} // Gir "peker" på alt inni
         >
           {React.cloneElement(frameworkIconComponent, {
             width: iconSize,
             height: iconSize,
+            className: "group-hover:scale-110 group-hover:text-aqua",
           })}
-
-          {/* 
-            LEGG TIL ET USYNLIG, KLIKKBART REKTANGEL PÅ TOPPEN AV IKONET.
-            Dette er en veldig pålitelig måte å fange klikk på i SVG.
-          */}
           <rect
-            x="0" // Starter på samme x som gruppen
-            y="0" // Starter på samme y som gruppen
+            x="0"
+            y="0"
             width={iconSize}
             height={iconSize}
-            fill="transparent" // Gjør den usynlig
-            onClick={onIconClick} // Fest onClick-handleren HER
-            className="cursor-pointer"
-            aria-label="Framework Info" // For tilgjengelighet
+            fill="transparent"
+            aria-label="Framework Info"
           />
         </g>
       )}
