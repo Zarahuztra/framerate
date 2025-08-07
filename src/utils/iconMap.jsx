@@ -187,11 +187,13 @@ export function getFrameworkIconElement(frameworkIconText) {
     IconComponentsMap[frameworkIconText] || IconComponentsMap["Default"];
   if (!IconComponentsMap[frameworkIconText]) {
     console.warn(
-      "Fant ikke ikon for:",
+      "[FEIL]: Fant ikke ikon for:",
       frameworkIconText,
-      "tilgjengelige keys:",
+      "\nTilgjengelige keys i IconComponentsMap:",
       Object.keys(IconComponentsMap)
     );
+  } else {
+    console.info("[INFO]: Viser ikon for:", frameworkIconText);
   }
   return IconComponent ? <IconComponent /> : null;
 }
