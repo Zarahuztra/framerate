@@ -185,5 +185,13 @@ export {
 export function getFrameworkIconElement(frameworkIconText) {
   const IconComponent =
     IconComponentsMap[frameworkIconText] || IconComponentsMap["Default"];
+  if (!IconComponentsMap[frameworkIconText]) {
+    console.warn(
+      "Fant ikke ikon for:",
+      frameworkIconText,
+      "tilgjengelige keys:",
+      Object.keys(IconComponentsMap)
+    );
+  }
   return IconComponent ? <IconComponent /> : null;
 }
