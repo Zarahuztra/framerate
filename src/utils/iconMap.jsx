@@ -44,6 +44,7 @@ export const IconComponentsMap = {
   "Tailwind CSS": TailwindIcon,
   Tailwind: TailwindIcon, // alias
   Bootstrap: BootstrapIcon,
+  Bootstrap: BootstrapIcon,
   Bulma: BulmaIcon,
   "Three.js": ThreeJsIcon,
   Three: ThreeJsIcon, // alias
@@ -51,10 +52,12 @@ export const IconComponentsMap = {
   "Pixi.js": PixiJsIcon, // alias
   Pixi: PixiJsIcon, // alias
   TypeScript: TypescriptIcon,
+  Typescript: TypescriptIcon, // alias (valgfritt)
   CSS: CSSIcon,
   "Express.js": ExpressIcon,
   Express: ExpressIcon, // alias
   NestJS: NestJSIcon,
+  Nest: NestJSIcon, // alias
   "Nuxt.js": NuxtIcon,
   Nuxt: NuxtIcon, // alias
   Default: DefaultIconComponent,
