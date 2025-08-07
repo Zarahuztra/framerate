@@ -2,7 +2,7 @@
 import React from "react";
 import OriginalLogo from "./Logo"; // Din standard logo
 import LogoWithIcon from "./logowithicon"; // Din logo som kan vise et ikon
-// import { Link } from "react-router-dom"; // Husk å bytte ut <a> med <Link> fra ditt routing-bibliotek
+import { Link } from "react-router-dom"; // Husk å bytte ut <a> med <Link> fra ditt routing-bibliotek
 
 const navLinks = [
   { text: "Home", path: "/" },
@@ -41,13 +41,13 @@ export default function Header({
       {/* ml-auto: Nøkkelen! "margin-left: auto" skyver denne nav-blokken helt til høyre. */}
       <nav className="hidden md:flex items-center space-x-6 lg:space-x-8 ml-auto">
         {navLinks.map((link) => (
-          <a // ERSTATT med <Link to={link.path}> for klient-side navigasjon
+          <Link
             key={link.text}
-            href={link.path}
+            to={link.path}
             className="text-base font-medium text-gray-600 hover:text-aqua transition-colors duration-150"
           >
             {link.text}
-          </a>
+          </Link>
         ))}
       </nav>
     </header>
