@@ -34,22 +34,29 @@ export const IconComponentsMap = {
   JavaScript: JavaScriptIcon,
   React: ReactIcon,
   "Next.js": NextJsIcon,
+  Next: NextJsIcon, // alias
   "Vue.js": VueIcon,
+  Vue: VueIcon, // alias
   Angular: AngularIcon,
   "Node.js": NodeJsIcon,
+  Node: NodeJsIcon, // alias
   Svelte: SvelteIcon,
   "Tailwind CSS": TailwindIcon,
-  Tailwind: TailwindIcon,
+  Tailwind: TailwindIcon, // alias
   Bootstrap: BootstrapIcon,
   Bulma: BulmaIcon,
   "Three.js": ThreeJsIcon,
+  Three: ThreeJsIcon, // alias
   PixiJS: PixiJsIcon,
+  "Pixi.js": PixiJsIcon, // alias
+  Pixi: PixiJsIcon, // alias
   TypeScript: TypescriptIcon,
   CSS: CSSIcon,
   "Express.js": ExpressIcon,
-  Express: ExpressIcon,
+  Express: ExpressIcon, // alias
   NestJS: NestJSIcon,
   "Nuxt.js": NuxtIcon,
+  Nuxt: NuxtIcon, // alias
   Default: DefaultIconComponent,
 };
 
