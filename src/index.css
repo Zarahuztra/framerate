@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+/* ... resten av scrollbar-stilene ... */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #00a4b8 #f1f1f1;
+}
+
+/* Custom Font Definition */
+@font-face {
+  font-family: "Baangkarr Press Right"; /* Navnet du vil bruke i CSS/Tailwind */
+  src: url("./assets/fonts/baangkarr-press-right.ttf") format("truetype"); /* Juster filnavn og format om nødvendig */
+  /* Hvis du har andre formater (ttf, woff2), kan du legge dem til her også */
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Google Font Import */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");

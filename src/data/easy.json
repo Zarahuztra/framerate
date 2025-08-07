@@ -1,0 +1,2970 @@
+[
+  {
+    "id": "js-easy-vars-001",
+    "title": "Declaring Variables with `let`",
+    "difficulty": "easy",
+    "framework": "JavaScript",
+    "frameworkIconText": "JS",
+    "tags": ["variables", "let", "declaration", "assignment"],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "In JavaScript, `let` is used to declare variables whose values can be changed (reassigned) later in your code."
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "code": "let userAge = 25;\nconsole.log(userAge); // Output: 25\n\nuserAge = 26; // Reassigning the value\nconsole.log(userAge); // Output: 26"
+      },
+      {
+        "type": "explanation",
+        "text": "First, `userAge` is declared and initialized to 25. Then, its value is updated to 26. The `let` keyword allows this reassignment."
+      },
+      {
+        "type": "tip",
+        "text": "Variables declared with `let` are block-scoped, meaning they are only accessible within the block of code (e.g., inside `{}`) where they are defined."
+      }
+    ],
+    "quiz": {
+      "snippet": "let message = \"Hello\";\nmessage = \"World\";\nconsole.log(message);",
+      "questionText": "What will be logged to the console?",
+      "options": ["Hello", "World", "HelloWorld", "Error"],
+      "correctOptionIndex": 1,
+      "explanationAfterAnswer": "The `let` keyword allows you to declare variables that can be reassigned. The last value assigned to `message` is 'World'."
+    }
+  },
+  {
+    "id": "js-easy-const-002",
+    "title": "Constant Variables with `const`",
+    "difficulty": "easy",
+    "framework": "JavaScript",
+    "frameworkIconText": "JS",
+    "tags": ["variables", "const", "immutability", "constants"],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "`const` is used to declare variables whose values are not intended to change after they are initialized. These are often called constants."
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "code": "const gravity = 9.8;\n// gravity = 10; // This would result in an error because you cannot reassign a const.\nconsole.log(gravity);"
+      },
+      {
+        "type": "explanation",
+        "text": "Once `gravity` is assigned the value 9.8, attempting to assign a new value (like 10) will cause a TypeError. This helps prevent accidental changes to important values."
+      },
+      {
+        "type": "important",
+        "text": "Note: For objects and arrays declared with `const`, the variable itself cannot be reassigned, but the properties of the object or elements of the array can still be modified."
+      }
+    ],
+    "quiz": {
+      "snippet": "const PI = 3.14;\n// PI = 3.14159; // This line is commented out\nconsole.log(PI);",
+      "questionText": "If the commented-out line `PI = 3.14159;` was executed, what would happen?",
+      "options": [
+        "PI would be updated to 3.14159",
+        "A TypeError would occur",
+        "A SyntaxError would occur",
+        "Nothing, the code would run fine"
+      ],
+      "correctOptionIndex": 1,
+      "explanationAfterAnswer": "Variables declared with `const` cannot be reassigned. Attempting to do so results in a TypeError."
+    }
+  },
+  {
+    "id": "js-easy-addition-003",
+    "title": "Basic Arithmetic: Addition",
+    "difficulty": "easy",
+    "framework": "JavaScript",
+    "frameworkIconText": "JS",
+    "tags": ["operators", "arithmetic", "numbers", "addition"],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "JavaScript can perform common mathematical operations. The `+` operator is used for addition."
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "code": "let apples = 5;\nlet oranges = 3;\nlet totalFruit = apples + oranges;\nconsole.log(totalFruit); // Output: 8"
+      },
+      {
+        "type": "explanation",
+        "text": "The value of `apples` (5) is added to the value of `oranges` (3), and the result (8) is stored in the `totalFruit` variable."
+      }
+    ],
+    "quiz": {
+      "snippet": "let score1 = 100;\nlet score2 = 250;\nlet totalScore = score1 + score2;\nconsole.log(totalScore);",
+      "questionText": "What is the output of this code?",
+      "options": ["100250", "100", "250", "350"],
+      "correctOptionIndex": 3,
+      "explanationAfterAnswer": "The `+` operator performs addition when both operands are numbers. So, 100 + 250 equals 350."
+    }
+  },
+  {
+    "id": "js-easy-string-concat-004",
+    "title": "String Concatenation",
+    "difficulty": "easy",
+    "framework": "JavaScript",
+    "frameworkIconText": "JS",
+    "tags": ["strings", "concatenation", "operators", "text"],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "The `+` operator can also be used to combine (concatenate) strings."
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "code": "let firstName = \"Ada\";\nlet lastName = \"Lovelace\";\nlet fullName = firstName + \" \" + lastName;\nconsole.log(fullName); // Output: Ada Lovelace"
+      },
+      {
+        "type": "explanation",
+        "text": "Here, the strings stored in `firstName`, a space character `\" \"`, and `lastName` are joined together to form the `fullName`."
+      },
+      {
+        "type": "tip",
+        "text": "Template literals (using backticks `` `${variable}` ``) are a more modern and often cleaner way to embed expressions and variables within strings."
+      }
+    ],
+    "quiz": {
+      "snippet": "let part1 = \"Java\";\nlet part2 = \"Script\";\nlet combined = part1 + part2;\nconsole.log(combined);",
+      "questionText": "What will be logged to the console?",
+      "options": ["Java Script", "JavaScript", "Java\nScript", "Error"],
+      "correctOptionIndex": 1,
+      "explanationAfterAnswer": "The `+` operator concatenates strings. 'Java' + 'Script' results in 'JavaScript' without any space in between."
+    }
+  },
+  {
+    "id": "js-easy-function-call-005",
+    "title": "Simple Function Call",
+    "difficulty": "easy",
+    "framework": "JavaScript",
+    "frameworkIconText": "JS",
+    "tags": ["functions", "basics", "execution", "return"],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "Functions are blocks of code designed to perform a particular task. They are executed when they are called (invoked)."
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "code": "function createGreeting() {\n  let greetingText = \"Hello from a function!\";\n  return greetingText;\n}\n\nlet myGreeting = createGreeting(); // Calling the function\nconsole.log(myGreeting);"
+      },
+      {
+        "type": "explanation",
+        "text": "The `createGreeting` function is defined and then called by using its name followed by parentheses `()`. The value returned by the function is stored in `myGreeting`."
+      }
+    ],
+    "quiz": {
+      "snippet": "function getNumber() {\n  return 42;\n}\nlet result = getNumber();\nconsole.log(result);",
+      "questionText": "What is the output of this code?",
+      "options": ["getNumber()", "result", "42", "undefined"],
+      "correctOptionIndex": 2,
+      "explanationAfterAnswer": "The `getNumber()` function is called, and it returns the number 42. This value is assigned to `result` and then logged."
+    }
+  },
+  {
+    "id": "react-easy-jsx-001",
+    "title": "Introduction to JSX",
+    "difficulty": "easy",
+    "framework": "React",
+    "frameworkIconText": "React",
+    "tags": ["jsx", "syntax", "components", "ui"],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "JSX (JavaScript XML) is a syntax extension for JavaScript that looks similar to HTML. React uses JSX to describe what the UI should look like. Browsers don't understand JSX directly, so it needs to be compiled (e.g., by Babel) into regular JavaScript function calls."
+      },
+      {
+        "type": "code",
+        "language": "jsx",
+        "code": "const name = \"Alice\";\nconst element = <h1>Hello, {name}!</h1>;\n\n// ReactDOM.render(element, document.getElementById('root'));\n// This would render \"Hello, Alice!\" in the element with id 'root'."
+      },
+      {
+        "type": "explanation",
+        "text": "In JSX, you can embed JavaScript expressions (like the `name` variable) inside curly braces `{}`. The `<h1>` tag looks like HTML but is actually transformed into React element creation calls."
+      }
+    ],
+    "quiz": {
+      "snippet": "const user = { firstName: \"Bob\", lastName: \"Marley\" };\nconst greeting = <p>Welcome, {user.firstName}!</p>;\n// What does 'greeting' represent?",
+      "questionText": "In the JSX snippet, what is `{user.firstName}` an example of?",
+      "options": [
+        "A string literal",
+        "A CSS class",
+        "A JavaScript expression embedded in JSX",
+        "An HTML comment"
+      ],
+      "correctOptionIndex": 2,
+      "explanationAfterAnswer": "Curly braces `{}` in JSX are used to embed valid JavaScript expressions. Here, `user.firstName` accesses a property of the `user` object."
+    }
+  },
+  {
+    "id": "react-easy-components-002",
+    "title": "Creating a Simple React Component",
+    "difficulty": "easy",
+    "framework": "React",
+    "frameworkIconText": "React",
+    "tags": ["components", "functional components", "props"],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "Components are the building blocks of React applications. They are like JavaScript functions that return React elements (describing UI). Functional components are a common way to define components."
+      },
+      {
+        "type": "code",
+        "language": "jsx",
+        "code": "function WelcomeMessage(props) {\n  return <h1>Hello, {props.name}</h1>;\n}\n\n// Usage:\n// const element = <WelcomeMessage name=\"Sarah\" />;\n// This would render \"Hello, Sarah!\""
+      },
+      {
+        "type": "explanation",
+        "text": "`WelcomeMessage` is a functional component that accepts an object of `props` (properties) as an argument. It returns a JSX element. When using the component, you pass data via attributes (like `name=\"Sarah\"`), which become properties of the `props` object."
+      }
+    ],
+    "quiz": {
+      "snippet": "function UserCard(props) {\n  return <p>User: {props.username}</p>;\n}\n// How would you use this component to display username \"dev123\"?",
+      "questionText": "Which JSX correctly uses the `UserCard` component to display the username \"dev123\"?",
+      "options": [
+        "<UserCard.username = \"dev123\" />",
+        "<UserCard username=\"dev123\" />",
+        "<UserCard props.username=\"dev123\" />",
+        "<UserCard>dev123</UserCard>"
+      ],
+      "correctOptionIndex": 1,
+      "explanationAfterAnswer": "Props are passed to components as attributes in JSX. `username=\"dev123\"` sets the `username` prop, which can then be accessed as `props.username` inside the `UserCard` component."
+    }
+  },
+  {
+    "id": "react-easy-usestate-hook-003",
+    "title": "Basic State with `useState` Hook",
+    "difficulty": "easy",
+    "framework": "React",
+    "frameworkIconText": "React",
+    "tags": ["state", "hooks", "useState", "functional components"],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "State allows a component to remember information and re-render when that information changes. The `useState` hook is used to add state to functional components."
+      },
+      {
+        "type": "code",
+        "language": "jsx",
+        "code": "import React, { useState } from 'react';\n\nfunction ClickCounter() {\n  // Declare a state variable 'count', initialized to 0\n  const [count, setCount] = useState(0);\n\n  return (\n    <div>\n      <p>You clicked {count} times</p>\n      <button onClick={() => setCount(count + 1)}>\n        Click me\n      </button>\n    </div>\n  );\n}"
+      },
+      {
+        "type": "explanation",
+        "text": "`useState(0)` returns an array with two elements: the current state value (`count`) and a function to update it (`setCount`). When `setCount` is called, React re-renders the component with the new `count` value."
+      }
+    ],
+    "quiz": {
+      "snippet": "const [isActive, setIsActive] = useState(false);\n// What does 'setIsActive' do?",
+      "questionText": "In `const [isActive, setIsActive] = useState(false);`, what is the role of `setIsActive`?",
+      "options": [
+        "It is the current value of the state",
+        "It is a function to update the 'isActive' state",
+        "It is the initial value of the state",
+        "It is a boolean always set to true"
+      ],
+      "correctOptionIndex": 1,
+      "explanationAfterAnswer": "`useState` returns a pair: the current state value and a function that lets you update it. `setIsActive` is the function used to change the value of the `isActive` state variable."
+    }
+  },
+  {
+    "id": "react-easy-event-handling-004",
+    "title": "Handling Events (e.g., onClick)",
+    "difficulty": "easy",
+    "framework": "React",
+    "frameworkIconText": "React",
+    "tags": ["events", "onClick", "buttons", "interaction"],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "React can respond to user interactions like clicks, input changes, etc., using event handlers. These are similar to HTML event attributes but are written in camelCase (e.g., `onClick` instead of `onclick`)."
+      },
+      {
+        "type": "code",
+        "language": "jsx",
+        "code": "function MyButton() {\n  function handleClick() {\n    alert('Button clicked!');\n  }\n\n  return (\n    <button onClick={handleClick}>\n      Press Me\n    </button>\n  );\n}"
+      },
+      {
+        "type": "explanation",
+        "text": "The `onClick` attribute on the `<button>` is assigned the `handleClick` function. When the button is clicked, the `handleClick` function is executed."
+      },
+      {
+        "type": "tip",
+        "text": "You can also define event handlers inline using arrow functions: `<button onClick={() => alert('Clicked!')}>Click</button>`."
+      }
+    ],
+    "quiz": {
+      "snippet": "function Greeter() {\n  const showAlert = () => alert('Hello!');\n  return <button onClick={showAlert}>Say Hi</button>;\n}",
+      "questionText": "What happens when the 'Say Hi' button is clicked?",
+      "options": [
+        "Nothing happens",
+        "The text 'Hello!' appears on the button",
+        "An alert box with 'Hello!' pops up",
+        "The console logs 'Hello!'"
+      ],
+      "correctOptionIndex": 2,
+      "explanationAfterAnswer": "The `onClick` event handler is set to the `showAlert` function. When the button is clicked, `showAlert` is called, which triggers `alert('Hello!')`."
+    }
+  },
+  {
+    "id": "react-easy-rendering-lists-005",
+    "title": "Rendering Lists of Data",
+    "difficulty": "easy",
+    "framework": "React",
+    "frameworkIconText": "React",
+    "tags": ["lists", "map", "keys", "rendering"],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "You can render lists of components or elements by using JavaScript's `map()` method inside JSX."
+      },
+      {
+        "type": "code",
+        "language": "jsx",
+        "code": "function ShoppingList(props) {\n  const items = props.items; // e.g., ['milk', 'bread', 'eggs']\n  const listItems = items.map((item, index) =>\n    // It's crucial to provide a unique 'key' prop for list items\n    <li key={index}>{item}</li>\n  );\n  return <ul>{listItems}</ul>;\n}\n\n// const myItems = ['apples', 'bananas'];\n// <ShoppingList items={myItems} />"
+      },
+      {
+        "type": "explanation",
+        "text": "The `items.map()` function transforms each item in the `items` array into an `<li>` React element. The `key` prop is important for React to efficiently update lists. Using the item's index as a key is okay for simple, static lists, but for dynamic lists, a unique ID is preferred."
+      }
+    ],
+    "quiz": {
+      "snippet": "const numbers = [1, 2, 3];\nconst listElements = numbers.map(num => <p key={num}>{num * 10}</p>);\n// What would `listElements[1]` be if rendered?",
+      "questionText": "Considering the `listElements` array, what would be the content of the second `<p>` tag?",
+      "options": ["10", "2", "20", "30"],
+      "correctOptionIndex": 2,
+      "explanationAfterAnswer": "The `map` function multiplies each number by 10. For the second element (`num` is 2, index is 1), `num * 10` is 20. The key prop is important but doesn't affect the content here."
+    }
+  },
+  {
+    "id": "nextjs-easy-routing-001",
+    "title": "File-System Routing in Next.js",
+    "difficulty": "easy",
+    "framework": "Next.js",
+    "frameworkIconText": "Next.js",
+    "tags": ["routing", "pages", "file system", "navigation"],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "Next.js uses a file-system based router. Any React component file created inside the `pages` directory automatically becomes a route."
+      },
+      {
+        "type": "code",
+        "language": "text",
+        "code": "pages/\n  index.js      => /\n  about.js      => /about\n  posts/\n    [id].js   => /posts/:id (dynamic route)\n    first-post.js => /posts/first-post"
+      },
+      {
+        "type": "explanation",
+        "text": "For example, `pages/about.js` will be accessible at the `/about` URL path. `pages/index.js` is the home page (`/`). Files named with square brackets like `[id].js` create dynamic routes."
+      }
+    ],
+    "quiz": {
+      "snippet": "// Project structure:\n// pages/\n//   contact.js\n//   services/\n//     index.js",
+      "questionText": "If you have a file at `pages/contact.js`, what URL path will it correspond to?",
+      "options": ["/pages/contact", "/contact.js", "/contact", "/"],
+      "correctOptionIndex": 2,
+      "explanationAfterAnswer": "In Next.js file-system routing, a file named `contact.js` inside the `pages` directory automatically becomes available at the `/contact` route."
+    }
+  },
+  {
+    "id": "nextjs-easy-link-component-002",
+    "title": "Client-Side Navigation with `Link`",
+    "difficulty": "easy",
+    "framework": "Next.js",
+    "frameworkIconText": "Next.js",
+    "tags": ["navigation", "Link component", "client-side routing", "spa"],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "To enable client-side navigation between pages in a Next.js application (which is faster than traditional browser navigation), you should use the `Link` component from `next/link`."
+      },
+      {
+        "type": "code",
+        "language": "jsx",
+        "code": "import Link from 'next/link';\n\nfunction Navbar() {\n  return (\n    <nav>\n      <Link href=\"/\">\n        <a>Home</a>\n      </Link>\n      <Link href=\"/about\">\n        <a>About Us</a>\n      </Link>\n    </nav>\n  );\n}\n// Note: In Next.js 13+ with the App Router, <a> is no longer needed as a direct child."
+      },
+      {
+        "type": "explanation",
+        "text": "The `Link` component pre-fetches page data in the background and handles client-side transitions, providing a smoother user experience similar to a Single Page Application (SPA)."
+      },
+      {
+        "type": "tip",
+        "text": "For Next.js versions 12 and below, the `Link` component requires an `<a>` tag as its direct child. For Next.js 13+ using the App Router, the `<a>` tag is typically not needed as a direct child of `Link`."
+      }
+    ],
+    "quiz": {
+      "snippet": "import Link from 'next/link';\n// <Link href=\"/products\"><button>View Products</button></Link>",
+      "questionText": "What is the primary benefit of using Next.js's `Link` component for navigation?",
+      "options": [
+        "It automatically styles links like buttons",
+        "It enables faster, client-side transitions between pages",
+        "It forces a full page reload for better SEO",
+        "It only works with external URLs"
+      ],
+      "correctOptionIndex": 1,
+      "explanationAfterAnswer": "The `Link` component from `next/link` enables client-side navigation, which means page transitions happen without a full browser reload, leading to a faster and smoother user experience."
+    }
+  },
+  {
+    "id": "nextjs-easy-layout-component-003",
+    "title": "Creating a Basic Layout Component",
+    "difficulty": "easy",
+    "framework": "Next.js",
+    "frameworkIconText": "Next.js",
+    "tags": ["layout", "components", "shared UI", "props.children"],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "Often, multiple pages in your application will share common UI elements like a header, footer, or navigation bar. A layout component is a reusable component that wraps your page content to provide this shared structure."
+      },
+      {
+        "type": "code",
+        "language": "jsx",
+        "code": "// components/Layout.js\nimport Navbar from './Navbar'; // Assume Navbar component exists\nimport Footer from './Footer'; // Assume Footer component exists\n\nexport default function Layout({ children }) {\n  return (\n    <>\n      <Navbar />\n      <main>{children}</main>\n      <Footer />\n    </>\n  );\n}\n\n// Usage in a page (e.g., pages/index.js)\n// import Layout from '../components/Layout';\n// export default function HomePage() {\n//   return (\n//     <Layout>\n//       <h1>Welcome to the Home Page</h1>\n//     </Layout>\n//   );\n// }"
+      },
+      {
+        "type": "explanation",
+        "text": "The `Layout` component accepts `children` as a prop. In a page file, you wrap your page-specific content with `<Layout>...</Layout>`, and that content will be rendered where `{children}` is placed within the `Layout` component."
+      }
+    ],
+    "quiz": {
+      "snippet": "function MainLayout({ children }) {\n  return (\n    <div>\n      <header>My App</header>\n      {children}\n      <footer>© 2023</footer>\n    </div>\n  );\n}\n// How is page-specific content passed into `MainLayout`?",
+      "questionText": "In a Next.js layout component like `MainLayout({ children })`, what does the `children` prop represent?",
+      "options": [
+        "Configuration options for the layout",
+        "The actual page content that the layout wraps",
+        "A list of child route components",
+        "CSS styles for the layout"
+      ],
+      "correctOptionIndex": 1,
+      "explanationAfterAnswer": "The `children` prop in a layout component refers to the content passed between the opening and closing tags of the layout component when it's used to wrap a page (e.g., `<MainLayout>Page Content Here</MainLayout>`)."
+    }
+  },
+  {
+    "id": "nextjs-easy-static-assets-004",
+    "title": "Serving Static Assets (Images)",
+    "difficulty": "easy",
+    "framework": "Next.js",
+    "frameworkIconText": "Next.js",
+    "tags": ["static files", "images", "public folder"],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "Next.js can serve static files, like images, from the `public` directory in the root of your project. Files inside `public` can then be referenced by your code starting from the base URL (`/`)."
+      },
+      {
+        "type": "code",
+        "language": "jsx",
+        "code": "// Assuming you have an image at: public/images/logo.png\n\nfunction MyImageComponent() {\n  return (\n    // The path starts from the public directory\n    <img src=\"/images/logo.png\" alt=\"My Company Logo\" />\n  );\n}\n\n// Next.js also has a powerful <Image> component for optimized images:\n// import Image from 'next/image';\n// <Image src=\"/images/logo.png\" alt=\"My Logo\" width={500} height={100} />"
+      },
+      {
+        "type": "explanation",
+        "text": "If you place an image at `public/images/logo.png`, you can use it in your components with `src=\"/images/logo.png\"`. For optimized images (resizing, lazy loading, etc.), Next.js provides the `next/image` component."
+      }
+    ],
+    "quiz": {
+      "snippet": "// An image is located at `public/my-avatar.jpg`.\n// How would you reference this image in an `<img>` tag?",
+      "questionText": "If an image `avatar.png` is placed in the `public/img/` directory, what is the correct `src` path to use in an `<img>` tag?",
+      "options": [
+        "public/img/avatar.png",
+        "../public/img/avatar.png",
+        "/img/avatar.png",
+        "./img/avatar.png"
+      ],
+      "correctOptionIndex": 2,
+      "explanationAfterAnswer": "Files in the `public` directory are served from the root of your application. So, `public/img/avatar.png` is accessed via the URL path `/img/avatar.png`."
+    }
+  },
+  {
+    "id": "nextjs-easy-api-routes-005",
+    "title": "Basic API Routes",
+    "difficulty": "easy",
+    "framework": "Next.js",
+    "frameworkIconText": "Next.js",
+    "tags": ["api routes", "backend", "serverless functions", "pages/api"],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "Next.js allows you to easily create API endpoints as serverless functions. Any file inside the `pages/api` directory is mapped to `/api/*` and is treated as an API endpoint instead of a React page."
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "code": "// File: pages/api/hello.js\n\nexport default function handler(req, res) {\n  // req: NextApiRequest (Node.js http.IncomingMessage + helpers)\n  // res: NextApiResponse (Node.js http.ServerResponse + helpers)\n  \n  if (req.method === 'GET') {\n    res.status(200).json({ message: 'Hello, world!' });\n  } else {\n    res.setHeader('Allow', ['GET']);\n    res.status(405).end(`Method ${req.method} Not Allowed`);\n  }\n}"
+      },
+      {
+        "type": "explanation",
+        "text": "This `hello.js` file, when placed in `pages/api/`, creates an API endpoint at `/api/hello`. When a GET request is made to this URL, it will respond with a JSON object `{ message: 'Hello, world!' }`."
+      }
+    ],
+    "quiz": {
+      "snippet": "// File: pages/api/user.js\nexport default function handler(req, res) {\n  res.status(200).json({ name: \"Jane Doe\" });\n}",
+      "questionText": "If the above code is in `pages/api/user.js`, what URL would you typically use to access this API endpoint?",
+      "options": ["/user", "/pages/api/user", "/api/user.js", "/api/user"],
+      "correctOptionIndex": 3,
+      "explanationAfterAnswer": "Files in the `pages/api` directory are mapped to the `/api/*` path. So, `pages/api/user.js` becomes the API endpoint `/api/user`."
+    }
+  },
+  {
+    "id": "ts-easy-basic-types-001",
+    "title": "Basic Types: string, number, boolean",
+    "difficulty": "easy",
+    "framework": "TypeScript",
+    "frameworkIconText": "TS",
+    "tags": ["types", "string", "number", "boolean", "static typing"],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "TypeScript adds static types to JavaScript. You can explicitly define the type of a variable. Common basic types include `string` for text, `number` for numeric values (integers and floats), and `boolean` for true/false values."
+      },
+      {
+        "type": "code",
+        "language": "typescript",
+        "code": "let greeting: string = \"Hello, TypeScript!\";\nlet userAge: number = 30;\nlet isActive: boolean = true;\n\n// TypeScript will warn if you try to assign a wrong type:\n// userAge = \"forty\"; // Error: Type 'string' is not assignable to type 'number'.\n\nconsole.log(greeting);\nconsole.log(`Age: ${userAge}, Active: ${isActive}`);"
+      },
+      {
+        "type": "explanation",
+        "text": "By declaring `greeting: string`, you're telling TypeScript that `greeting` should always hold a string. If you try to assign a number to it, the TypeScript compiler will show an error before you even run the code."
+      }
+    ],
+    "quiz": {
+      "snippet": "let count: number;\ncount = 5;\n// count = \"five\"; // This line is commented out",
+      "questionText": "If the commented-out line `count = \"five\";` was executed, what would the TypeScript compiler do?",
+      "options": [
+        "Automatically convert \"five\" to the number 5",
+        "Report a type error because a string cannot be assigned to a number type",
+        "Allow the assignment, but issue a runtime warning",
+        "Change the type of `count` to string"
+      ],
+      "correctOptionIndex": 1,
+      "explanationAfterAnswer": "TypeScript is statically typed. Since `count` is declared as `number`, assigning a string value like \"five\" to it would result in a compile-time type error."
+    }
+  },
+  {
+    "id": "ts-easy-arrays-002",
+    "title": "Typed Arrays",
+    "difficulty": "easy",
+    "framework": "TypeScript",
+    "frameworkIconText": "TS",
+    "tags": ["arrays", "types", "collections"],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "You can define arrays that hold elements of a specific type. There are two common syntaxes: `type[]` or `Array<type>`."
+      },
+      {
+        "type": "code",
+        "language": "typescript",
+        "code": "let scores: number[] = [100, 90, 85];\nlet names: Array<string> = [\"Alice\", \"Bob\", \"Charlie\"];\n\n// TypeScript helps prevent adding elements of the wrong type:\n// scores.push(\"A+\"); // Error: Argument of type 'string' is not assignable to parameter of type 'number'.\n\nconsole.log(scores[0]);    // Output: 100\nconsole.log(names.length); // Output: 3"
+      },
+      {
+        "type": "explanation",
+        "text": "`scores: number[]` means `scores` is an array that can only contain numbers. `names: Array<string>` means `names` is an array that can only contain strings. Attempting to add an element of a different type will cause a compile-time error."
+      }
+    ],
+    "quiz": {
+      "snippet": "let fruits: string[] = [\"apple\", \"banana\"];\nfruits.push(\"orange\");\n// fruits.push(3); // This line is commented out",
+      "questionText": "If `fruits.push(3);` was executed, what would happen during TypeScript compilation?",
+      "options": [
+        "The number 3 would be added to the array",
+        "The number 3 would be converted to the string \"3\" and added",
+        "A type error would occur because 3 is not a string",
+        "The `push` method would be ignored"
+      ],
+      "correctOptionIndex": 2,
+      "explanationAfterAnswer": "Since `fruits` is typed as `string[]`, only strings can be added to it. Pushing a number (3) would violate this type and cause a TypeScript compile-time error."
+    }
+  },
+  {
+    "id": "ts-easy-functions-params-return-003",
+    "title": "Typing Function Parameters and Return Values",
+    "difficulty": "easy",
+    "framework": "TypeScript",
+    "frameworkIconText": "TS",
+    "tags": ["functions", "parameters", "return types", "types"],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "TypeScript allows you to specify types for function parameters and the value that a function returns. This improves code clarity and helps catch errors early."
+      },
+      {
+        "type": "code",
+        "language": "typescript",
+        "code": "function add(a: number, b: number): number {\n  return a + b;\n}\n\nlet sum: number = add(5, 3); // sum is 8\n// let wrongSum = add(\"5\", 3); // Error: Argument of type 'string' is not assignable to parameter of type 'number'.\n\nfunction greet(name: string): void { // 'void' means the function doesn't return a value\n  console.log(`Hello, ${name}!`);\n}\n\ngreet(\"World\");"
+      },
+      {
+        "type": "explanation",
+        "text": "`add(a: number, b: number): number` means the function `add` takes two parameters, `a` and `b`, both of type `number`, and it returns a value of type `number`. `greet(name: string): void` means `greet` takes a `string` and returns nothing (`void`)."
+      }
+    ],
+    "quiz": {
+      "snippet": "function multiply(x: number, y: number): number {\n  return x * y;\n}\nlet product = multiply(3, 4);",
+      "questionText": "What is the type of the `product` variable in this TypeScript code?",
+      "options": ["string", "any", "number", "void"],
+      "correctOptionIndex": 2,
+      "explanationAfterAnswer": "The `multiply` function is explicitly typed to return a `number`. Since `product` is assigned the result of calling `multiply`, TypeScript infers that `product` is also of type `number`."
+    }
+  },
+  {
+    "id": "ts-easy-interfaces-004",
+    "title": "Defining Object Shapes with Interfaces",
+    "difficulty": "easy",
+    "framework": "TypeScript",
+    "frameworkIconText": "TS",
+    "tags": ["interfaces", "objects", "shapes", "types", "contracts"],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "Interfaces in TypeScript are a powerful way to define contracts for object shapes. They specify what properties an object should have and what types those properties should be."
+      },
+      {
+        "type": "code",
+        "language": "typescript",
+        "code": "interface User {\n  id: number;\n  username: string;\n  isActive?: boolean; // Optional property\n}\n\nfunction displayUser(user: User): void {\n  console.log(`ID: ${user.id}, Username: ${user.username}`);\n  if (user.isActive !== undefined) {\n    console.log(`Active: ${user.isActive}`);\n  }\n}\n\nlet myUser: User = { id: 1, username: \"coder123\", isActive: true };\ndisplayUser(myUser);\n\nlet anotherUser: User = { id: 2, username: \"devgirl\" }; // isActive is optional\ndisplayUser(anotherUser);"
+      },
+      {
+        "type": "explanation",
+        "text": "The `User` interface defines that any object of type `User` must have an `id` (number) and `username` (string). `isActive` is an optional property, indicated by the `?`."
+      }
+    ],
+    "quiz": {
+      "snippet": "interface Point {\n  x: number;\n  y: number;\n}\n\nlet p1: Point = { x: 10, y: 20 };\n// let p2: Point = { x: 5 }; // Error: Property 'y' is missing",
+      "questionText": "What is the primary purpose of an interface like `Point` in TypeScript?",
+      "options": [
+        "To create a new class instance",
+        "To define a function's signature",
+        "To describe the shape or structure an object should have",
+        "To store multiple values in an ordered list"
+      ],
+      "correctOptionIndex": 2,
+      "explanationAfterAnswer": "Interfaces are used to define the 'shape' or 'contract' that an object must adhere to, specifying its properties and their types."
+    }
+  },
+  {
+    "id": "ts-easy-union-types-005",
+    "title": "Union Types",
+    "difficulty": "easy",
+    "framework": "TypeScript",
+    "frameworkIconText": "TS",
+    "tags": ["union types", "types", "flexibility"],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "Union types allow a variable or function parameter to hold a value of one of several specified types. You use the `|` (pipe) character to define a union type."
+      },
+      {
+        "type": "code",
+        "language": "typescript",
+        "code": "function displayInput(input: string | number): void {\n  if (typeof input === \"number\") {\n    console.log(`Your number is: ${input * 2}`);\n  } else {\n    console.log(`Your string is: ${input.toUpperCase()}`);\n  }\n}\n\ndisplayInput(10);       // Output: Your number is: 20\ndisplayInput(\"hello\");  // Output: Your string is: HELLO\n\n// let myVar: string | boolean;\n// myVar = \"test\";\n// myVar = true;\n// myVar = 123; // Error"
+      },
+      {
+        "type": "explanation",
+        "text": "The `displayInput` function can accept either a `string` or a `number`. Inside the function, we use `typeof` to check the actual type of the input at runtime and perform different operations accordingly (this is called type narrowing)."
+      }
+    ],
+    "quiz": {
+      "snippet": "let result: string | null;\nresult = \"Success!\";\nresult = null;\n// result = 100; // This would be an error",
+      "questionText": "A variable `id: number | string;` can hold which of the following values without a type error?",
+      "options": [
+        "Only numbers",
+        "Only strings",
+        "Either a number or a string",
+        "Only boolean values"
+      ],
+      "correctOptionIndex": 2,
+      "explanationAfterAnswer": "A union type `number | string` means the variable can hold a value that is either a `number` or a `string`."
+    }
+  },
+  {
+    "id": "vue-easy-instance-001",
+    "title": "Creating a Vue Instance & Data Binding",
+    "difficulty": "easy",
+    "framework": "Vue.js",
+    "frameworkIconText": "Vue",
+    "tags": ["vue instance", "data binding", "mustache syntax", "reactivity"],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "A Vue application starts by creating a new Vue instance. The `data` option on a Vue instance is an object where you can define properties that will become reactive and can be bound to the template."
+      },
+      {
+        "type": "code",
+        "language": "html",
+        "code": "<div id=\"app\">\n  <p>{{ message }}</p>\n  <input v-model=\"message\">\n</div>\n\n<script src=\"https://unpkg.com/vue@next\"></script>\n<script>\n  const app = Vue.createApp({\n    data() {\n      return {\n        message: \"Hello Vue!\"\n      };\n    }\n  });\n  app.mount('#app');\n</script>"
+      },
+      {
+        "type": "explanation",
+        "text": "The `message` property from the `data` object is rendered in the paragraph using mustache syntax `{{ message }}`. The `v-model` directive on the input creates a two-way binding: changing the input updates `message`, and changing `message` in the data updates the input."
+      }
+    ],
+    "quiz": {
+      "snippet": "<div id=\"app\">\n  <p>{{ product.name }}</p>\n</div>\n<script>\n  Vue.createApp({\n    data() { return { product: { name: 'Book', price: 20 } }; }\n  }).mount('#app');\n</script>",
+      "questionText": "What will be displayed in the paragraph tag?",
+      "options": ["{{ product.name }}", "Book", "product.name", "Error"],
+      "correctOptionIndex": 1,
+      "explanationAfterAnswer": "Vue's mustache syntax `{{ product.name }}` will interpolate the `name` property of the `product` object from the Vue instance's data, displaying 'Book'."
+    }
+  },
+  {
+    "id": "vue-easy-directives-v-if-002",
+    "title": "Conditional Rendering with `v-if`",
+    "difficulty": "easy",
+    "framework": "Vue.js",
+    "frameworkIconText": "Vue",
+    "tags": ["directives", "v-if", "conditional rendering", "v-else"],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "The `v-if` directive is used to conditionally render a block of HTML. The block will only be rendered if the directive's expression returns a truthy value. You can also use `v-else-if` and `v-else`."
+      },
+      {
+        "type": "code",
+        "language": "html",
+        "code": "<div id=\"app\">\n  <button @click=\"toggleVisibility\">Toggle Message</button>\n  <p v-if=\"isVisible\">You can see this message!</p>\n  <p v-else>The message is hidden.</p>\n</div>\n\n<script>\n  Vue.createApp({\n    data() {\n      return {\n        isVisible: true\n      };\n    },\n    methods: {\n      toggleVisibility() {\n        this.isVisible = !this.isVisible;\n      }\n    }\n  }).mount('#app');\n</script>"
+      },
+      {
+        "type": "explanation",
+        "text": "Initially, `isVisible` is true, so 'You can see this message!' is rendered. Clicking the button toggles the `isVisible` property, which in turn conditionally renders either the `v-if` or `v-else` paragraph."
+      }
+    ],
+    "quiz": {
+      "snippet": "<div id=\"app\">\n  <p v-if=\"showDetails\">Details are visible.</p>\n</div>\n<script>\n  Vue.createApp({\n    data() { return { showDetails: false }; }\n  }).mount('#app');\n</script>",
+      "questionText": "Based on the initial data, will the paragraph 'Details are visible.' be rendered?",
+      "options": [
+        "Yes",
+        "No",
+        "It will be rendered but hidden by CSS",
+        "It will cause an error"
+      ],
+      "correctOptionIndex": 1,
+      "explanationAfterAnswer": "The `v-if` directive checks the value of `showDetails`. Since `showDetails` is initially `false`, the paragraph will not be rendered in the DOM."
+    }
+  },
+  {
+    "id": "vue-easy-directives-v-for-003",
+    "title": "List Rendering with `v-for`",
+    "difficulty": "easy",
+    "framework": "Vue.js",
+    "frameworkIconText": "Vue",
+    "tags": ["directives", "v-for", "list rendering", "arrays", "keys"],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "The `v-for` directive is used to render a list of items based on an array. It requires a special syntax in the form of `item in items`, where `items` is the source data array and `item` is an alias for the array element being iterated on."
+      },
+      {
+        "type": "code",
+        "language": "html",
+        "code": "<div id=\"app\">\n  <ul>\n    <li v-for=\"(todo, index) in todos\" :key=\"index\">\n      {{ index + 1 }}. {{ todo.text }}\n    </li>\n  </ul>\n</div>\n\n<script>\n  Vue.createApp({\n    data() {\n      return {\n        todos: [\n          { text: 'Learn Vue' },\n          { text: 'Build something awesome' },\n          { text: 'Drink coffee' }\n        ]\n      };\n    }\n  }).mount('#app');\n</script>"
+      },
+      {
+        "type": "explanation",
+        "text": "The `v-for` directive iterates through the `todos` array. For each `todo` object, an `<li>` element is created. The `:key` attribute is crucial for Vue to efficiently update the list. You can also get the `index` of the current item."
+      }
+    ],
+    "quiz": {
+      "snippet": "<div id=\"app\">\n  <span v-for=\"n in 3\" :key=\"n\">{{ n }}</span>\n</div>\n<script>\n  Vue.createApp({ data() { return {}; } }).mount('#app');\n</script>",
+      "questionText": "What will be rendered by the `v-for=\"n in 3\"` directive?",
+      "options": [
+        "Nothing, it's invalid syntax",
+        "The numbers 0, 1, 2",
+        "The numbers 1, 2, 3",
+        "The string \"123\""
+      ],
+      "correctOptionIndex": 2,
+      "explanationAfterAnswer": "`v-for` can also iterate over an integer range. `v-for=\"n in 3\"` will loop 3 times, with `n` taking values 1, 2, and 3 successively."
+    }
+  },
+  {
+    "id": "vue-easy-event-handling-v-on-004",
+    "title": "Handling Events with `v-on` (or `@`)",
+    "difficulty": "easy",
+    "framework": "Vue.js",
+    "frameworkIconText": "Vue",
+    "tags": ["events", "v-on", "@click", "methods", "interaction"],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "The `v-on` directive (shorthand `@`) is used to listen to DOM events and run some JavaScript when they are triggered. Event handlers are typically methods defined in the Vue instance."
+      },
+      {
+        "type": "code",
+        "language": "html",
+        "code": "<div id=\"app\">\n  <p>Count: {{ count }}</p>\n  <button v-on:click=\"incrementCount\">Increment</button>\n  <button @mouseover=\"logMouseOver\">Hover Me</button> \n</div>\n\n<script>\n  Vue.createApp({\n    data() {\n      return { count: 0 };\n    },\n    methods: {\n      incrementCount() {\n        this.count++; // 'this' refers to the Vue instance\n      },\n      logMouseOver() {\n        console.log('Mouse is over the button!');\n      }\n    }\n  }).mount('#app');\n</script>"
+      },
+      {
+        "type": "explanation",
+        "text": "`v-on:click` (or `@click`) calls the `incrementCount` method when the button is clicked. `this.count` inside the method refers to the `count` property in the `data` object. `@mouseover` is shorthand for `v-on:mouseover`."
+      }
+    ],
+    "quiz": {
+      "snippet": "<div id=\"app\">\n  <button @click=\"counter += 1\">Add</button>\n  <p>{{ counter }}</p>\n</div>\n<script>\n  Vue.createApp({ data() { return { counter: 0 }; } }).mount('#app');\n</script>",
+      "questionText": "If the 'Add' button is clicked twice, what will be the value displayed in the paragraph?",
+      "options": ["0", "1", "2", "Error"],
+      "correctOptionIndex": 2,
+      "explanationAfterAnswer": "The `@click=\"counter += 1\"` directly modifies the `counter` data property. Clicking twice will increment `counter` from 0 to 1, then from 1 to 2."
+    }
+  },
+  {
+    "id": "vue-easy-computed-properties-005",
+    "title": "Computed Properties",
+    "difficulty": "easy",
+    "framework": "Vue.js",
+    "frameworkIconText": "Vue",
+    "tags": [
+      "computed properties",
+      "data manipulation",
+      "caching",
+      "reactivity"
+    ],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "Computed properties allow you to define properties that are derived from other data properties. They are cached based on their reactive dependencies and only re-evaluate when some of their dependencies have changed."
+      },
+      {
+        "type": "code",
+        "language": "html",
+        "code": "<div id=\"app\">\n  <p>First Name: <input v-model=\"firstName\"></p>\n  <p>Last Name: <input v-model=\"lastName\"></p>\n  <p>Full Name: {{ fullName }}</p>\n</div>\n\n<script>\n  Vue.createApp({\n    data() {\n      return {\n        firstName: 'John',\n        lastName: 'Doe'\n      };\n    },\n    computed: {\n      fullName() {\n        // 'this' points to the Vue instance\n        return `${this.firstName} ${this.lastName}`;\n      }\n    }\n  }).mount('#app');\n</script>"
+      },
+      {
+        "type": "explanation",
+        "text": "The `fullName` computed property depends on `firstName` and `lastName`. Whenever `firstName` or `lastName` changes (e.g., through the input fields), `fullName` will automatically re-calculate and update in the template. It's accessed like a regular data property."
+      }
+    ],
+    "quiz": {
+      "snippet": "<div id=\"app\">{{ reversedMessage }}</div>\n<script>\n  Vue.createApp({\n    data() { return { message: 'vue' }; },\n    computed: {\n      reversedMessage() { return this.message.split('').reverse().join(''); }\n    }\n  }).mount('#app');\n</script>",
+      "questionText": "What will be displayed inside the div?",
+      "options": ["vue", "euv", "message", "Error"],
+      "correctOptionIndex": 1,
+      "explanationAfterAnswer": "The `reversedMessage` computed property takes `this.message` ('vue'), splits it into an array `['v', 'u', 'e']`, reverses it to `['e', 'u', 'v']`, and joins it back into the string 'euv'."
+    }
+  },
+  {
+    "id": "angular-easy-components-001",
+    "title": "Creating a Basic Angular Component",
+    "difficulty": "easy",
+    "framework": "Angular",
+    "frameworkIconText": "Angular",
+    "tags": [
+      "components",
+      "decorators",
+      "@Component",
+      "templates",
+      "selectors"
+    ],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "Components are the main building blocks of Angular applications. Each component consists of an HTML template, a TypeScript class for logic, and CSS styles. The `@Component` decorator marks a class as an Angular component and provides configuration metadata."
+      },
+      {
+        "type": "code",
+        "language": "typescript",
+        "code": "// src/app/hello-world/hello-world.component.ts\nimport { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-hello-world', // How you use this component in HTML\n  template: `<h1>{{ message }}</h1>`,\n  // Or templateUrl: './hello-world.component.html'\n  // styles: [`h1 { color: blue; }`]\n  // Or styleUrls: ['./hello-world.component.css']\n})\nexport class HelloWorldComponent {\n  message: string = 'Hello, Angular World!';\n\n  constructor() { }\n}\n\n// To use it in another component's template (e.g., app.component.html):\n// <app-hello-world></app-hello-world>\n// And ensure HelloWorldComponent is declared in a module (e.g., AppModule)."
+      },
+      {
+        "type": "explanation",
+        "text": "The `@Component` decorator links the `HelloWorldComponent` class with its HTML template (inline or external) and an optional CSS selector. The `message` property is bound to the template using interpolation `{{ message }}`."
+      }
+    ],
+    "quiz": {
+      "snippet": "@Component({\n  selector: 'app-greeting',\n  template: '<p>Greetings!</p>'\n})\nexport class GreetingComponent {}",
+      "questionText": "What does the `selector` property in the `@Component` decorator define?",
+      "options": [
+        "The CSS class for styling the component",
+        "The HTML tag name used to instantiate the component in a template",
+        "The TypeScript class name",
+        "The module this component belongs to"
+      ],
+      "correctOptionIndex": 1,
+      "explanationAfterAnswer": "The `selector` property defines the custom HTML tag (e.g., `<app-greeting>`) that you use in other templates to render an instance of this component."
+    }
+  },
+  {
+    "id": "angular-easy-databinding-interpolation-002",
+    "title": "Data Binding: Interpolation",
+    "difficulty": "easy",
+    "framework": "Angular",
+    "frameworkIconText": "Angular",
+    "tags": ["data binding", "interpolation", "templates", "expressions"],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "Interpolation is a one-way data binding technique in Angular that allows you to display component property values in your HTML template. You use double curly braces `{{ }}` to embed expressions."
+      },
+      {
+        "type": "code",
+        "language": "typescript",
+        "code": "// src/app/user-profile/user-profile.component.ts\nimport { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-user-profile',\n  template: `\n    <div>\n      <h2>Name: {{ user.name }}</h2>\n      <p>Age: {{ user.age }}</p>\n      <p>Is Admin: {{ user.isAdmin ? 'Yes' : 'No' }}</p>\n    </div>\n  `\n})\nexport class UserProfileComponent {\n  user = {\n    name: 'Alice Wonderland',\n    age: 30,\n    isAdmin: true\n  };\n}"
+      },
+      {
+        "type": "explanation",
+        "text": "The expressions `{{ user.name }}`, `{{ user.age }}`, and `{{ user.isAdmin ? 'Yes' : 'No' }}` are evaluated, and their results are rendered as text in the HTML. This is a one-way binding from the component class to the template."
+      }
+    ],
+    "quiz": {
+      "snippet": "// component.ts\n// title: string = \"My Awesome App\";\n\n// component.html\n// <h1>{{ title }}</h1>",
+      "questionText": "If a component has a property `productName = \"Laptop\"`, how would you display its value in the template using interpolation?",
+      "options": [
+        "<p>[productName]</p>",
+        "<p>{productName}</p>",
+        "<p>{{ productName }}</p>",
+        "<p property=\"productName\"></p>"
+      ],
+      "correctOptionIndex": 2,
+      "explanationAfterAnswer": "Interpolation in Angular uses double curly braces `{{ }}` to bind a component property's value to the template, so `{{ productName }}` would display 'Laptop'."
+    }
+  },
+  {
+    "id": "angular-easy-databinding-property-binding-003",
+    "title": "Data Binding: Property Binding",
+    "difficulty": "easy",
+    "framework": "Angular",
+    "frameworkIconText": "Angular",
+    "tags": [
+      "data binding",
+      "property binding",
+      "square brackets",
+      "DOM properties"
+    ],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "Property binding allows you to set the value of an element's property (like `src` of an `<img>` tag or `disabled` of a `<button>`) to the value of a component property. It uses square brackets `[]` around the DOM property."
+      },
+      {
+        "type": "code",
+        "language": "typescript",
+        "code": "// src/app/image-display/image-display.component.ts\nimport { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-image-display',\n  template: `\n    <img [src]=\"imageUrl\" alt=\"A descriptive alt text\">\n    <button [disabled]=\"isButtonDisabled\">Click Me</button>\n  `\n})\nexport class ImageDisplayComponent {\n  imageUrl: string = '/assets/my-image.png';\n  isButtonDisabled: boolean = true;\n}"
+      },
+      {
+        "type": "explanation",
+        "text": "`[src]=\"imageUrl\"` binds the `src` property of the `<img>` tag to the `imageUrl` component property. Similarly, `[disabled]=\"isButtonDisabled\"` binds the `disabled` property of the `<button>`."
+      }
+    ],
+    "quiz": {
+      "snippet": "// component.ts\n// linkUrl: string = \"https://angular.io\";\n\n// component.html\n// <a [href]=\"linkUrl\">Angular Official Site</a>",
+      "questionText": "Which syntax is used for property binding in Angular?",
+      "options": [
+        "{{ propertyName }}",
+        "(propertyName)",
+        "[[propertyName]]",
+        "[propertyName]"
+      ],
+      "correctOptionIndex": 3,
+      "explanationAfterAnswer": "Property binding in Angular uses square brackets `[]` around the DOM property you want to bind to a component property (e.g., `[href]=\"componentProperty\"`)."
+    }
+  },
+  {
+    "id": "angular-easy-databinding-event-binding-004",
+    "title": "Data Binding: Event Binding",
+    "difficulty": "easy",
+    "framework": "Angular",
+    "frameworkIconText": "Angular",
+    "tags": [
+      "data binding",
+      "event binding",
+      "parentheses",
+      "methods",
+      "user interaction"
+    ],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "Event binding allows your component to respond to DOM events (like clicks, mouse movements, key presses). You use parentheses `()` around the DOM event name and assign a component method to be called when the event occurs."
+      },
+      {
+        "type": "code",
+        "language": "typescript",
+        "code": "// src/app/counter/counter.component.ts\nimport { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-counter',\n  template: `\n    <p>Count: {{ count }}</p>\n    <button (click)=\"increment()\">Increment</button>\n    <button (click)=\"decrement()\">Decrement</button>\n  `\n})\nexport class CounterComponent {\n  count: number = 0;\n\n  increment() {\n    this.count++;\n  }\n\n  decrement() {\n    this.count--;\n  }\n}"
+      },
+      {
+        "type": "explanation",
+        "text": "`(click)=\"increment()\"` means that when the button is clicked, the `increment` method in the `CounterComponent` class will be executed, updating the `count` property."
+      }
+    ],
+    "quiz": {
+      "snippet": "// component.ts\n// saveData() { console.log('Data saved!'); }\n\n// component.html\n// <button (click)=\"saveData()\">Save</button>",
+      "questionText": "Which syntax is used for event binding in Angular?",
+      "options": [
+        "{{ eventName }}",
+        "[eventName]",
+        "((eventName))",
+        "(eventName)"
+      ],
+      "correctOptionIndex": 3,
+      "explanationAfterAnswer": "Event binding in Angular uses parentheses `()` around the DOM event name (e.g., `(click)`) and assigns it to a method or statement in the component class."
+    }
+  },
+  {
+    "id": "angular-easy-ngif-directive-005",
+    "title": "Conditional Rendering with `*ngIf`",
+    "difficulty": "easy",
+    "framework": "Angular",
+    "frameworkIconText": "Angular",
+    "tags": [
+      "directives",
+      "*ngIf",
+      "conditional rendering",
+      "structural directives"
+    ],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "The `*ngIf` directive is a structural directive that conditionally adds or removes an element from the DOM based on a boolean expression. If the expression is true, the element is rendered; otherwise, it's removed."
+      },
+      {
+        "type": "code",
+        "language": "typescript",
+        "code": "// src/app/login-status/login-status.component.ts\nimport { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-login-status',\n  template: `\n    <div *ngIf=\"isLoggedIn; else loggedOutContent\">\n      <p>Welcome back, user!</p>\n      <button (click)=\"logout()\">Logout</button>\n    </div>\n    <ng-template #loggedOutContent>\n      <p>Please log in.</p>\n      <button (click)=\"login()\">Login</button>\n    </ng-template>\n  `\n})\nexport class LoginStatusComponent {\n  isLoggedIn: boolean = false;\n\n  login() { this.isLoggedIn = true; }\n  logout() { this.isLoggedIn = false; }\n}"
+      },
+      {
+        "type": "explanation",
+        "text": "`*ngIf=\"isLoggedIn\"` will render the `div` if `isLoggedIn` is true. If it's false, the content defined in the `<ng-template #loggedOutContent>` (referenced by `else loggedOutContent`) will be rendered instead. The asterisk `*` denotes a structural directive."
+      }
+    ],
+    "quiz": {
+      "snippet": "// component.ts\n// showWarning: boolean = true;\n\n// component.html\n// <div *ngIf=\"showWarning\" class=\"warning\">Warning!</div>",
+      "questionText": "If `showWarning` is `false`, what happens to the `div` with the class 'warning'?",
+      "options": [
+        "It is rendered but hidden with CSS (display: none)",
+        "It is rendered but is transparent (opacity: 0)",
+        "It is completely removed from the DOM",
+        "It causes a template parse error"
+      ],
+      "correctOptionIndex": 2,
+      "explanationAfterAnswer": "The `*ngIf` directive removes the element and its children from the DOM entirely when its condition is false. It doesn't just hide it with CSS."
+    }
+  },
+  {
+    "id": "nodejs-easy-helloworld-001",
+    "title": "Node.js: Hello World (HTTP Server)",
+    "difficulty": "easy",
+    "framework": "Node.js",
+    "frameworkIconText": "Node",
+    "tags": ["http", "server", "basics", "request", "response"],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "Node.js allows you to run JavaScript on the server-side. A common first step is creating a simple HTTP server that responds to requests."
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "code": "// main.js (run with 'node main.js')\nconst http = require('http'); // Import the built-in HTTP module\n\nconst hostname = '127.0.0.1';\nconst port = 3000;\n\nconst server = http.createServer((req, res) => {\n  res.statusCode = 200;\n  res.setHeader('Content-Type', 'text/plain');\n  res.end('Hello, World!\\n');\n});\n\nserver.listen(port, hostname, () => {\n  console.log(`Server running at http://${hostname}:${port}/`);\n});"
+      },
+      {
+        "type": "explanation",
+        "text": "This code uses the built-in `http` module to create a server. The `createServer` method takes a callback function that is executed for each incoming request. `res.end()` sends the response back to the client. `server.listen()` starts the server."
+      }
+    ],
+    "quiz": {
+      "snippet": "const http = require('http');\nconst server = http.createServer((req, res) => {\n  // What method sends the response body and signals completion?\n});",
+      "questionText": "Which method on the `res` (response) object is typically used to send the response body and signal to the server that the response is complete?",
+      "options": [
+        "res.send()",
+        "res.write() followed by res.close()",
+        "res.end()",
+        "res.status()"
+      ],
+      "correctOptionIndex": 2,
+      "explanationAfterAnswer": "`res.end()` is used to send the response body (optionally) and finalize the response. While `res.write()` can send chunks, `res.end()` is needed to complete it."
+    }
+  },
+  {
+    "id": "nodejs-easy-fs-readfile-002",
+    "title": "File System: Reading a File",
+    "difficulty": "easy",
+    "framework": "Node.js",
+    "frameworkIconText": "Node",
+    "tags": [
+      "file system",
+      "fs module",
+      "readFile",
+      "asynchronous",
+      "callbacks"
+    ],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "Node.js provides a built-in `fs` (File System) module for interacting with the file system. You can read files asynchronously (non-blocking) or synchronously."
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "code": "// main.js (assume 'example.txt' exists with content 'Hello from file!')\nconst fs = require('fs');\n\nfs.readFile('example.txt', 'utf8', (err, data) => {\n  if (err) {\n    console.error('Error reading file:', err);\n    return;\n  }\n  console.log('File content:', data);\n});\n\nconsole.log('Reading file (asynchronously)...');\n// Output order will likely be:\n// Reading file (asynchronously)...\n// File content: Hello from file!"
+      },
+      {
+        "type": "explanation",
+        "text": "`fs.readFile()` is asynchronous. It takes a file path, encoding, and a callback function. The callback is executed once the file is read (or an error occurs). The `console.log('Reading file...')` runs before the file content is logged because `readFile` doesn't block execution."
+      }
+    ],
+    "quiz": {
+      "snippet": "const fs = require('fs');\nfs.readFile('myfile.txt', 'utf8', (error, content) => {\n  if (error) { /* handle error */ }\n  // What does 'content' hold if successful?\n});",
+      "questionText": "In the `fs.readFile` callback `(error, content) => { ... }`, what does the `content` parameter typically contain if the file is read successfully?",
+      "options": [
+        "A boolean indicating success",
+        "The file's metadata (size, date modified)",
+        "The actual content of the file as a string (if 'utf8' encoding is used)",
+        "A Buffer object always"
+      ],
+      "correctOptionIndex": 2,
+      "explanationAfterAnswer": "If an encoding like 'utf8' is specified, the `content` parameter in the `fs.readFile` callback will contain the file's content as a string. If no encoding is specified, it would be a Buffer object."
+    }
+  },
+  {
+    "id": "nodejs-easy-modules-require-003",
+    "title": "Modules: `require` and `module.exports`",
+    "difficulty": "easy",
+    "framework": "Node.js",
+    "frameworkIconText": "Node",
+    "tags": [
+      "modules",
+      "require",
+      "module.exports",
+      "commonjs",
+      "code organization"
+    ],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "Node.js uses the CommonJS module system by default (though ES Modules are also supported). You can create reusable code in separate files (modules) and import them using `require()`. Values are exported from a module using `module.exports`."
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "code": "// myMath.js\nconst add = (a, b) => a + b;\nconst PI = 3.14159;\n\nmodule.exports = {\n  addFunction: add,\n  piValue: PI\n};\n\n// main.js\nconst myMathModule = require('./myMath.js');\n\nconsole.log(myMathModule.addFunction(5, 3)); // Output: 8\nconsole.log(myMathModule.piValue);           // Output: 3.14159"
+      },
+      {
+        "type": "explanation",
+        "text": "`myMath.js` exports an object containing `addFunction` and `piValue`. `main.js` uses `require('./myMath.js')` to import this exported object and can then access its properties."
+      }
+    ],
+    "quiz": {
+      "snippet": "// utils.js\n// module.exports.greet = (name) => `Hello, ${name}`;\n\n// app.js\n// const utils = require('./utils');\n// console.log(utils.greet('Node'));",
+      "questionText": "In a Node.js module, what is `module.exports` primarily used for?",
+      "options": [
+        "To import other modules",
+        "To execute the module's code immediately",
+        "To specify which values (functions, objects, variables) from the current module are made available to other modules that `require` it",
+        "To define global variables"
+      ],
+      "correctOptionIndex": 2,
+      "explanationAfterAnswer": "`module.exports` is an object that Node.js uses to define what code from a module is exported and thus made available when another module uses `require()` to import it."
+    }
+  },
+  {
+    "id": "nodejs-easy-npm-basics-004",
+    "title": "NPM: Basic Package Management",
+    "difficulty": "easy",
+    "framework": "Node.js",
+    "frameworkIconText": "Node",
+    "tags": [
+      "npm",
+      "package manager",
+      "dependencies",
+      "package.json",
+      "node_modules"
+    ],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "NPM (Node Package Manager) is the default package manager for Node.js. It's used to install and manage external libraries (packages) that your project depends on. The `package.json` file lists these dependencies."
+      },
+      {
+        "type": "code",
+        "language": "bash",
+        "code": "# Initialize a new Node.js project (creates package.json)\nnpm init -y\n\n# Install an external package (e.g., lodash) and save it as a dependency\nnpm install lodash\n\n# package.json will now list lodash under 'dependencies'\n\n# In your Node.js file (e.g., main.js):\n# const _ = require('lodash');\n# console.log(_.shuffle([1, 2, 3, 4])); // Example lodash usage"
+      },
+      {
+        "type": "explanation",
+        "text": "`npm init -y` creates a `package.json` file. `npm install <packageName>` downloads the package from the npm registry into a `node_modules` folder and adds it to `dependencies` in `package.json`. You can then `require()` the installed package in your code."
+      }
+    ],
+    "quiz": {
+      "snippet": "// To use an external library like 'axios' in a Node.js project,\n// you first need to install it using npm.",
+      "questionText": "Which npm command is used to install a new package (e.g., 'express') and add it to your project's dependencies in `package.json`?",
+      "options": [
+        "npm create express",
+        "npm start express",
+        "npm install express",
+        "npm express --add"
+      ],
+      "correctOptionIndex": 2,
+      "explanationAfterAnswer": "`npm install <package-name>` (or `npm i <package-name>`) is the command used to download and install a package from the npm registry and, by default, save it as a dependency in your `package.json` file."
+    }
+  },
+  {
+    "id": "nodejs-easy-event-emitter-005",
+    "title": "Events: Basic Event Emitter",
+    "difficulty": "easy",
+    "framework": "Node.js",
+    "frameworkIconText": "Node",
+    "tags": [
+      "events",
+      "EventEmitter",
+      "asynchronous",
+      "custom events",
+      "observer pattern"
+    ],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "Many objects in Node.js emit events (e.g., an HTTP server emits a 'request' event). You can also create your own custom event emitters using the `events` module. This is a way to handle asynchronous operations or signal occurrences."
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "code": "const EventEmitter = require('events');\n\nclass MyEmitter extends EventEmitter {}\n\nconst myEmitter = new MyEmitter();\n\n// Register an event listener\nmyEmitter.on('customEvent', (arg1, arg2) => {\n  console.log('customEvent occurred!', arg1, arg2);\n});\n\nconsole.log('Emitting event...');\n// Emit the event\nmyEmitter.emit('customEvent', 'Hello', 'World');\n\nconsole.log('Event emitted.');\n// Output order:\n// Emitting event...\n// customEvent occurred! Hello World\n// Event emitted."
+      },
+      {
+        "type": "explanation",
+        "text": "We create a `MyEmitter` instance. `myEmitter.on('customEvent', ...)` registers a listener for 'customEvent'. `myEmitter.emit('customEvent', ...)` triggers all registered listeners for that event, passing along any arguments."
+      }
+    ],
+    "quiz": {
+      "snippet": "const EventEmitter = require('events');\nconst emitter = new EventEmitter();\nemitter.on('greet', (name) => console.log(`Hello, ${name}`));\nemitter.emit('greet', 'Node User');",
+      "questionText": "What is the primary role of the `.on()` method of an EventEmitter instance?",
+      "options": [
+        "To trigger an event",
+        "To remove an event listener",
+        "To register a callback function (listener) to be executed when a specific event is emitted",
+        "To check if an event has any listeners"
+      ],
+      "correctOptionIndex": 2,
+      "explanationAfterAnswer": "The `.on('eventName', listenerCallback)` method is used to register a `listenerCallback` function that will be invoked whenever the EventEmitter instance emits an event with the matching `eventName`."
+    }
+  },
+  {
+    "id": "svelte-easy-reactivity-001",
+    "title": "Svelte Reactivity & Script Tag",
+    "difficulty": "easy",
+    "framework": "Svelte",
+    "frameworkIconText": "Svelte",
+    "tags": ["reactivity", "script tag", "variables", "data binding"],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "Svelte is a compiler that turns your declarative components into efficient imperative JavaScript. Variables declared in the `<script>` tag are reactive by default. When their values change, Svelte automatically updates the DOM."
+      },
+      {
+        "type": "code",
+        "language": "html",
+        "code": "<!-- App.svelte -->\n<script>\n  let name = 'World';\n  let count = 0;\n\n  function increment() {\n    count += 1;\n  }\n</script>\n\n<h1>Hello, {name}!</h1>\n<p>You clicked {count} {count === 1 ? 'time' : 'times'}</p>\n<button on:click={increment}>\n  Click me\n</button>\n\n<input bind:value={name} placeholder=\"Enter your name\">"
+      },
+      {
+        "type": "explanation",
+        "text": "Variables `name` and `count` are declared in the `<script>` block. `name` is two-way bound to the input using `bind:value`. `count` is updated by the `increment` function when the button is clicked. Svelte handles re-rendering the `<h1>` and `<p>` tags when these variables change."
+      }
+    ],
+    "quiz": {
+      "snippet": "<!-- MyComponent.svelte -->\n<script>\n  let message = \"Initial Message\";\n  // How to make 'message' appear in the h2 tag?\n</script>\n\n<h2><!-- ??? --></h2>\n<button on:click={() => message = 'Updated!'}>Update</button>",
+      "questionText": "In a Svelte component, how do you display the value of a reactive variable `message` (declared in `<script>`) inside an `<h2>` tag in the template?",
+      "options": [
+        "<h2>{{this.message}}</h2>",
+        "<h2>{message}</h2>",
+        "<h2 svelte:bind={message}></h2>",
+        "<h2>${message}</h2>"
+      ],
+      "correctOptionIndex": 1,
+      "explanationAfterAnswer": "Svelte uses curly braces `{}` for interpolating JavaScript expressions (including variable values) directly into the HTML markup. So, `<h2>{message}</h2>` will display the current value of the `message` variable."
+    }
+  },
+  {
+    "id": "svelte-easy-event-handling-002",
+    "title": "Event Handling with `on:` Directive",
+    "difficulty": "easy",
+    "framework": "Svelte",
+    "frameworkIconText": "Svelte",
+    "tags": ["events", "on:click", "event handlers", "dom events"],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "Svelte uses the `on:` directive to listen to DOM events. For example, `on:click` listens for click events. You can assign it to a function defined in your `<script>` block or use an inline arrow function."
+      },
+      {
+        "type": "code",
+        "language": "html",
+        "code": "<!-- Clicker.svelte -->\n<script>\n  let clicks = 0;\n\n  function handleClick() {\n    clicks += 1;\n    console.log('Button was clicked!');\n  }\n</script>\n\n<p>Number of clicks: {clicks}</p>\n<button on:click={handleClick}>Click Me</button>\n<button on:mouseover={() => console.log('Mouse over second button!')}>\n  Hover Me\n</button>"
+      },
+      {
+        "type": "explanation",
+        "text": "`on:click={handleClick}` calls the `handleClick` method when the first button is clicked. The second button uses an inline arrow function for its `on:mouseover` event."
+      }
+    ],
+    "quiz": {
+      "snippet": "<script>\n  let name = 'Svelte';\n  function greet() { alert(`Hello, ${name}!`); }\n</script>\n\n<button on:click={greet}>Greet</button>",
+      "questionText": "What happens when the 'Greet' button is clicked in this Svelte component?",
+      "options": [
+        "The console logs 'Hello, Svelte!'",
+        "Nothing, because `greet` needs parentheses: `on:click={greet()}`",
+        "An alert box saying 'Hello, Svelte!' appears",
+        "The button's text changes to 'Hello, Svelte!'"
+      ],
+      "correctOptionIndex": 2,
+      "explanationAfterAnswer": "The `on:click={greet}` directive attaches the `greet` function as the event handler for click events. When clicked, the `greet` function executes, showing an alert."
+    }
+  },
+  {
+    "id": "svelte-easy-props-003",
+    "title": "Passing Data to Components with Props",
+    "difficulty": "easy",
+    "framework": "Svelte",
+    "frameworkIconText": "Svelte",
+    "tags": ["components", "props", "export let", "parent-child communication"],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "Components can receive data from their parent components through props. In Svelte, you declare props in the child component's `<script>` block by exporting a variable with `export let`."
+      },
+      {
+        "type": "code",
+        "language": "html",
+        "code": "<!-- ChildMessage.svelte -->\n<script>\n  export let text = 'Default message'; // 'text' is a prop, with a default value\n</script>\n\n<p style=\"color: blue;\">{text}</p>\n\n\n<!-- App.svelte (Parent) -->\n<!-- \n<script>\n  import ChildMessage from './ChildMessage.svelte';\n  let customMessage = \"Hello from Parent!\";\n</script>\n\n<ChildMessage text=\"Static Prop Message\" />\n<ChildMessage text={customMessage} /> \n<ChildMessage /> // Uses default value\n-->"
+      },
+      {
+        "type": "explanation",
+        "text": "`ChildMessage.svelte` declares a prop `text` using `export let text`. The parent component (`App.svelte`) can then pass a value for this prop like an HTML attribute: `<ChildMessage text=\"Some value\" />` or bind it to a variable: `<ChildMessage text={variableName} />`."
+      }
+    ],
+    "quiz": {
+      "snippet": "<!-- UserGreeting.svelte -->\n<script>\n  export let username;\n</script>\n<p>Welcome, {username}!</p>\n\n<!-- App.svelte -->\n<!-- <UserGreeting username=\"Alex\" /> -->",
+      "questionText": "How is the `username` prop declared in `UserGreeting.svelte` to receive data from a parent component?",
+      "options": [
+        "`prop username;`",
+        "`const username = getProp('username');`",
+        "`export let username;`",
+        "`this.props.username;`"
+      ],
+      "correctOptionIndex": 2,
+      "explanationAfterAnswer": "In Svelte, props are declared by exporting variables from the child component's `<script>` block using the `export let` syntax (e.g., `export let username;`)."
+    }
+  },
+  {
+    "id": "svelte-easy-conditional-rendering-if-004",
+    "title": "Conditional Rendering with `{#if}` Blocks",
+    "difficulty": "easy",
+    "framework": "Svelte",
+    "frameworkIconText": "Svelte",
+    "tags": [
+      "conditional rendering",
+      "if blocks",
+      "{#if}",
+      "{:else}",
+      "{:else if}"
+    ],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "Svelte uses `{#if ...}` blocks for conditional rendering in templates. You can also use `{:else if ...}` and `{:else}` within these blocks."
+      },
+      {
+        "type": "code",
+        "language": "html",
+        "code": "<!-- LoginStatus.svelte -->\n<script>\n  let loggedIn = false;\n\n  function toggleLogin() {\n    loggedIn = !loggedIn;\n  }\n</script>\n\n{#if loggedIn}\n  <p>Welcome back, user!</p>\n  <button on:click={toggleLogin}>Log out</button>\n{:else}\n  <p>Please log in.</p>\n  <button on:click={toggleLogin}>Log in</button>\n{/if}\n\n<!-- Example with else if -->\n<!-- \n<script>\n  let score = 75;\n</script>\n{#if score > 90}\n  <p>Grade: A</p>\n{:else if score > 70}\n  <p>Grade: B</p>\n{:else}\n  <p>Grade: C or lower</p>\n{/if}\n-->"
+      },
+      {
+        "type": "explanation",
+        "text": "The content inside `{#if loggedIn} ... {/if}` is rendered only if `loggedIn` is true. Otherwise, the content inside the `{:else}` block is rendered. The block structure is closed with `{/if}`."
+      }
+    ],
+    "quiz": {
+      "snippet": "<script>\n  let temperature = 5;\n</script>\n\n{#if temperature < 0}\n  <p>Freezing!</p>\n{:else if temperature < 10}\n  <p>Cold.</p>\n{:else}\n  <p>Mild.</p>\n{/if}",
+      "questionText": "Given `temperature = 5`, what text will be rendered?",
+      "options": ["Freezing!", "Cold.", "Mild.", "Freezing!Cold.Mild."],
+      "correctOptionIndex": 1,
+      "explanationAfterAnswer": "The first condition `temperature < 0` (5 < 0) is false. The second condition `temperature < 10` (5 < 10) is true. Therefore, 'Cold.' is rendered, and the final `{:else}` block is skipped."
+    }
+  },
+  {
+    "id": "svelte-easy-each-block-005",
+    "title": "Looping through Lists with `{#each}` Blocks",
+    "difficulty": "easy",
+    "framework": "Svelte",
+    "frameworkIconText": "Svelte",
+    "tags": ["loops", "each blocks", "{#each}", "list rendering", "arrays"],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "To render a list of items from an array or iterable, Svelte uses the `{#each ...}` block. You iterate over the collection and can access each item (and optionally its index)."
+      },
+      {
+        "type": "code",
+        "language": "html",
+        "code": "<!-- TodoList.svelte -->\n<script>\n  let todos = [\n    { id: 1, text: 'Learn Svelte', completed: true },\n    { id: 2, text: 'Build an app', completed: false },\n    { id: 3, text: 'Deploy it', completed: false }\n  ];\n</script>\n\n<ul>\n  {#each todos as todo (todo.id)} \n    <!-- (todo.id) is the key for efficient updates -->\n    <li class:completed={todo.completed}>\n      {todo.text}\n    </li>\n  {/each}\n</ul>\n\n<style>\n  .completed {\n    text-decoration: line-through;\n    color: grey;\n  }\n</style>"
+      },
+      {
+        "type": "explanation",
+        "text": "`{#each todos as todo (todo.id)}` iterates over the `todos` array. For each `todo` object, an `<li>` is rendered. `(todo.id)` is used as a key, which helps Svelte efficiently update the list when items change, are added, or removed. The `class:completed={todo.completed}` is a Svelte directive for conditionally applying a CSS class."
+      }
+    ],
+    "quiz": {
+      "snippet": "<script>\n  let colors = ['red', 'green', 'blue'];\n</script>\n<ul>\n  {#each colors as color, i (color)}\n    <li>Item {{ i }}: {color}</li>\n  {/each}\n</ul>",
+      "questionText": "If the `colors` array is `['red', 'green', 'blue']`, what will be rendered for the second list item?",
+      "options": [
+        "Item 0: red",
+        "Item 1: green",
+        "Item green: 1",
+        "Item 2: blue"
+      ],
+      "correctOptionIndex": 1,
+      "explanationAfterAnswer": "In `{#each colors as color, i}`, `color` is the item and `i` is its index (0-based). For the second item ('green'), `i` will be 1, so it renders 'Item 1: green'."
+    }
+  },
+  {
+    "id": "nuxtjs-easy-pages-routing-001",
+    "title": "File-System Routing with the `pages/` Directory",
+    "difficulty": "easy",
+    "framework": "Nuxt.js",
+    "frameworkIconText": "Nuxt",
+    "tags": ["routing", "pages directory", "file system", "navigation"],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "Nuxt.js provides file-system routing based on the structure of your `pages/` directory. Creating a `.vue` file in this directory automatically creates a corresponding route."
+      },
+      {
+        "type": "code",
+        "language": "text",
+        "code": "pages/\n  index.vue      => /\n  about.vue      => /about\n  products/\n    index.vue  => /products\n    [id].vue   => /products/:id (dynamic route)"
+      },
+      {
+        "type": "explanation",
+        "text": "For instance, a file `pages/about.vue` will be accessible at the `/about` URL. `pages/index.vue` corresponds to the homepage (`/`). Files like `[id].vue` create dynamic routes where `id` is a parameter."
+      }
+    ],
+    "quiz": {
+      "snippet": "// Project structure:\n// pages/\n//   services.vue\n//   team/\n//     members.vue",
+      "questionText": "If you have a file at `pages/services.vue`, what URL path will Nuxt.js automatically map it to?",
+      "options": [
+        "/pages/services",
+        "/services.vue",
+        "/services",
+        "/app/services"
+      ],
+      "correctOptionIndex": 2,
+      "explanationAfterAnswer": "Nuxt.js's file-system router maps `pages/services.vue` to the `/services` URL path."
+    }
+  },
+  {
+    "id": "nuxtjs-easy-nuxtlink-002",
+    "title": "Client-Side Navigation with `<NuxtLink>`",
+    "difficulty": "easy",
+    "framework": "Nuxt.js",
+    "frameworkIconText": "Nuxt",
+    "tags": ["navigation", "NuxtLink", "client-side routing", "spa-like"],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "For client-side navigation between pages in your Nuxt application (providing a faster, SPA-like experience), you should use the built-in `<NuxtLink>` component."
+      },
+      {
+        "type": "code",
+        "language": "html",
+        "code": "<!-- components/Navbar.vue -->\n<template>\n  <nav>\n    <NuxtLink to=\"/\">Home</NuxtLink>\n    <NuxtLink to=\"/about\">About Us</NuxtLink>\n    <NuxtLink to=\"/products/123\">Product 123</NuxtLink>\n  </nav>\n</template>\n\n<script setup>\n// No script needed for basic NuxtLink usage\n</script>"
+      },
+      {
+        "type": "explanation",
+        "text": "The `<NuxtLink>` component handles client-side transitions. It intelligently pre-fetches code-split pages when links are visible in the viewport, leading to very fast navigation."
+      }
+    ],
+    "quiz": {
+      "snippet": "<!-- In a Nuxt page or component -->\n<template>\n  <NuxtLink to=\"/contact\">Contact Us</NuxtLink>\n</template>",
+      "questionText": "What is the primary benefit of using `<NuxtLink>` for internal navigation in a Nuxt.js app?",
+      "options": [
+        "It ensures all links open in a new tab.",
+        "It enables client-side navigation without a full page reload, making transitions faster.",
+        "It automatically styles the links with the application's theme.",
+        "It's only for linking to external websites."
+      ],
+      "correctOptionIndex": 1,
+      "explanationAfterAnswer": "`<NuxtLink>` provides client-side routing, meaning it navigates between pages within the Nuxt application without requiring a full browser refresh, resulting in a faster and smoother user experience."
+    }
+  },
+  {
+    "id": "nuxtjs-easy-layouts-003",
+    "title": "Shared UI with Layouts",
+    "difficulty": "easy",
+    "framework": "Nuxt.js",
+    "frameworkIconText": "Nuxt",
+    "tags": [
+      "layouts",
+      "shared UI",
+      "default layout",
+      "custom layouts",
+      "slot"
+    ],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "Layouts in Nuxt.js allow you to define a common structure for your pages, such as a header and footer. You can have a default layout (`layouts/default.vue`) or create custom named layouts."
+      },
+      {
+        "type": "code",
+        "language": "html",
+        "code": "<!-- layouts/default.vue -->\n<template>\n  <div>\n    <header>My Awesome App Header</header>\n    <main>\n      <slot /> <!-- Page content will be injected here -->\n    </main>\n    <footer>My App Footer - © 2023</footer>\n  </div>\n</template>\n\n<!-- pages/about.vue -->\n<!-- \n<template>\n  <div>\n    <h1>About Us</h1>\n    <p>This page will automatically use the default layout.</p>\n  </div>\n</template>\n-->\n\n<!-- To use a custom layout, e.g., layouts/custom.vue: -->\n<!-- pages/special.vue -->\n<!-- \n<template>\n  <div>Special page content</div>\n</template>\n<script setup>\n  definePageMeta({ layout: 'custom' });\n</script>\n-->"
+      },
+      {
+        "type": "explanation",
+        "text": "The `layouts/default.vue` file is automatically used for all pages unless another layout is specified. The `<slot />` component within a layout file is where the content of the current page will be rendered. Custom layouts can be defined in the `layouts/` directory and applied to pages using `definePageMeta`."
+      }
+    ],
+    "quiz": {
+      "snippet": "<!-- layouts/default.vue -->\n<template>\n  <div>\n    <AppHeader />\n    <slot /> \n    <AppFooter />\n  </div>\n</template>\n<!-- A page component uses this default layout. -->",
+      "questionText": "In a Nuxt.js layout file (e.g., `default.vue`), what is the purpose of the `<slot />` component?",
+      "options": [
+        "To define a reusable UI snippet.",
+        "To import another component.",
+        "It's a placeholder where the content of the currently routed page will be rendered.",
+        "To handle user input."
+      ],
+      "correctOptionIndex": 2,
+      "explanationAfterAnswer": "The `<slot />` component in a Nuxt layout file acts as a placeholder. Nuxt will inject the content of the currently active page component into this slot."
+    }
+  },
+  {
+    "id": "nuxtjs-easy-composables-usestate-004",
+    "title": "Basic State with `useState` Composable",
+    "difficulty": "easy",
+    "framework": "Nuxt.js",
+    "frameworkIconText": "Nuxt",
+    "tags": [
+      "composables",
+      "useState",
+      "state management",
+      "reactivity",
+      "ssr-friendly"
+    ],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "Nuxt 3 introduces composables for managing state and other concerns. `useState` is a built-in composable that provides SSR-friendly reactive state shared across components. It's similar to Vue's `ref` but designed for Nuxt's server/client environment."
+      },
+      {
+        "type": "code",
+        "language": "html",
+        "code": "<!-- components/Counter.vue -->\n<template>\n  <div>\n    <p>Count: {{ count }}</p>\n    <button @click=\"increment\">Increment</button>\n  </div>\n</template>\n\n<script setup>\n  // Create a reactive state variable 'count'\n  // 'counter' is a unique key for this state across the app\n  const count = useState('counter', () => 0); // () => 0 is the factory for initial value\n\n  function increment() {\n    count.value++;\n  }\n</script>\n\n<!-- This counter state can be accessed and modified by any other\n     component using useState('counter') -->"
+      },
+      {
+        "type": "explanation",
+        "text": "`useState('uniqueKey', factoryFunction)` creates a reactive state variable. The `uniqueKey` ensures that the same state instance is shared if used elsewhere. The factory function `() => 0` provides the initial value. You access/modify the value using `.value` (e.g., `count.value`)."
+      }
+    ],
+    "quiz": {
+      "snippet": "// In a Nuxt 3 component's <script setup>\nconst theme = useState('appTheme', () => 'light');\n\nfunction toggleTheme() {\n  theme.value = theme.value === 'light' ? 'dark' : 'light';\n}",
+      "questionText": "What is `useState` primarily used for in Nuxt 3?",
+      "options": [
+        "Fetching data from an API",
+        "Defining component props",
+        "Creating SSR-friendly, shared reactive state that can be accessed across components",
+        "Handling URL query parameters"
+      ],
+      "correctOptionIndex": 2,
+      "explanationAfterAnswer": "`useState` is a Nuxt 3 composable for creating reactive state that is preserved during server-side rendering and can be shared across different parts of your application using a unique key."
+    }
+  },
+  {
+    "id": "nuxtjs-easy-usefetch-005",
+    "title": "Data Fetching with `useFetch` Composable",
+    "difficulty": "easy",
+    "framework": "Nuxt.js",
+    "frameworkIconText": "Nuxt",
+    "tags": [
+      "composables",
+      "useFetch",
+      "data fetching",
+      "api calls",
+      "ssr-friendly"
+    ],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "`useFetch` is a powerful composable in Nuxt 3 for fetching data from APIs. It handles server-side rendering of the data, client-side hydration, and provides reactive state for data, pending status, and errors."
+      },
+      {
+        "type": "code",
+        "language": "html",
+        "code": "<!-- pages/posts.vue -->\n<template>\n  <div>\n    <h1>Posts</h1>\n    <div v-if=\"pending\">Loading posts...</div>\n    <div v-else-if=\"error\">Error loading posts: {{ error.message }}</div>\n    <ul v-else>\n      <li v-for=\"post in data\" :key=\"post.id\">\n        {{ post.title }}\n      </li>\n    </ul>\n  </div>\n</template>\n\n<script setup>\n  // Fetch data from an API endpoint\n  // The URL can be an API route within your Nuxt app or an external API\n  const { data, pending, error, refresh } = await useFetch('https://jsonplaceholder.typicode.com/posts?_limit=5');\n  \n  // 'data' will hold the fetched posts\n  // 'pending' is true while fetching\n  // 'error' will contain an error object if the fetch fails\n  // 'refresh' is a function to re-fetch the data\n</script>"
+      },
+      {
+        "type": "explanation",
+        "text": "`useFetch` takes the API URL as an argument. It returns an object with reactive properties: `data` (the fetched data), `pending` (a boolean indicating if the request is in progress), and `error`. Using `await useFetch` makes the component setup asynchronous."
+      }
+    ],
+    "quiz": {
+      "snippet": "<script setup>\n  const { data, pending } = await useFetch('/api/user/1');\n</script>\n<template>\n  <div v-if=\"pending\">Loading...</div>\n  <div v-else>{{ data.name }}</div>\n</template>",
+      "questionText": "When using `useFetch` in a Nuxt 3 component, what does the `pending` property (returned by `useFetch`) typically indicate?",
+      "options": [
+        "That the fetched data is ready to be displayed",
+        "That an error occurred during the data fetching process",
+        "That the data fetching request is currently in progress",
+        "That the data needs to be manually refreshed"
+      ],
+      "correctOptionIndex": 2,
+      "explanationAfterAnswer": "The `pending` property returned by `useFetch` is a reactive boolean that is `true` while the data fetching request is ongoing and becomes `false` once the request completes (either successfully or with an error)."
+    }
+  },
+  {
+    "id": "nestjs-easy-controller-route-001",
+    "title": "Creating a Basic Controller and Route",
+    "difficulty": "easy",
+    "framework": "NestJS",
+    "frameworkIconText": "NestJS",
+    "tags": ["controllers", "routes", "@Controller", "@Get", "http methods"],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "Controllers in NestJS are responsible for handling incoming requests and returning responses to the client. They are defined using classes and decorators. The `@Controller()` decorator defines a base route for all handlers within the controller, and method decorators like `@Get()`, `@Post()`, etc., define specific routes and HTTP methods."
+      },
+      {
+        "type": "code",
+        "language": "typescript",
+        "code": "// src/app.controller.ts\nimport { Controller, Get } from '@nestjs/common';\n\n@Controller('greet') // Base route for this controller is '/greet'\nexport class AppController {\n  @Get() // Handles GET requests to '/greet'\n  getHello(): string {\n    return 'Hello from NestJS!';\n  }\n\n  @Get('world') // Handles GET requests to '/greet/world'\n  getHelloWorld(): string {\n    return 'Hello, World from NestJS!';\n  }\n}\n\n// This controller needs to be part of a module (e.g., AppModule)\n// @Module({ controllers: [AppController] }) export class AppModule {}"
+      },
+      {
+        "type": "explanation",
+        "text": "The `AppController` is associated with the base path `/greet`. The `getHello()` method handles `GET /greet` requests, and `getHelloWorld()` handles `GET /greet/world` requests. The return value of these methods is typically sent as the response body."
+      }
+    ],
+    "quiz": {
+      "snippet": "// src/items.controller.ts\n// @Controller('items')\n// export class ItemsController {\n//   @Get(':id') // What kind of route does this create?\n//   findOne(@Param('id') id: string) { return `Item ${id}`; }\n// }",
+      "questionText": "If a controller method is decorated with `@Get(':itemId')` and the controller itself is decorated with `@Controller('products')`, what URL path would this method handle for a GET request?",
+      "options": [
+        "/products/:itemId",
+        "/itemId/:products",
+        "/products/itemId",
+        "/:itemId/products"
+      ],
+      "correctOptionIndex": 0,
+      "explanationAfterAnswer": "The `@Controller('products')` sets the base path. The `@Get(':itemId')` on the method appends to this base path, creating a route like `/products/someValue` where `someValue` is captured as `itemId`."
+    }
+  },
+  {
+    "id": "nestjs-easy-services-002",
+    "title": "Basic Service for Business Logic",
+    "difficulty": "easy",
+    "framework": "NestJS",
+    "frameworkIconText": "NestJS",
+    "tags": [
+      "services",
+      "@Injectable",
+      "business logic",
+      "separation of concerns"
+    ],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "Services in NestJS are typically classes marked with the `@Injectable()` decorator. They are used to encapsulate business logic, data access, or other functionalities, promoting better code organization and reusability. Controllers often delegate tasks to services."
+      },
+      {
+        "type": "code",
+        "language": "typescript",
+        "code": "// src/app.service.ts\nimport { Injectable } from '@nestjs/common';\n\n@Injectable()\nexport class AppService {\n  getGreeting(): string {\n    return 'Welcome to our NestJS App!';\n  }\n}\n\n// src/app.controller.ts\nimport { Controller, Get } from '@nestjs/common';\nimport { AppService } from './app.service';\n\n@Controller()\nexport class AppController {\n  constructor(private readonly appService: AppService) {} // Service injected\n\n  @Get('welcome')\n  getWelcomeMessage(): string {\n    return this.appService.getGreeting();\n  }\n}\n\n// AppService needs to be listed in the 'providers' array of a module."
+      },
+      {
+        "type": "explanation",
+        "text": "The `AppService` has a simple method `getGreeting()`. The `AppController` injects an instance of `AppService` through its constructor (Dependency Injection) and calls its method to get the greeting message."
+      }
+    ],
+    "quiz": {
+      "snippet": "// users.service.ts\n// @Injectable()\n// export class UsersService {\n//   findAll() { return [{id: 1, name: 'Alice'}]; }\n// }\n\n// users.controller.ts\n// constructor(private usersService: UsersService) {}\n// @Get()\n// getAllUsers() { return this.usersService.findAll(); }",
+      "questionText": "What is a primary benefit of using services in NestJS?",
+      "options": [
+        "To directly handle HTTP request and response objects.",
+        "To define HTML templates for the application.",
+        "To encapsulate and separate business logic from controllers, making the code more modular and testable.",
+        "To manage client-side routing."
+      ],
+      "correctOptionIndex": 2,
+      "explanationAfterAnswer": "Services are used to abstract business logic, data manipulation, and other concerns away from controllers. This promotes a separation of concerns, making the codebase cleaner, more organized, easier to test, and reusable."
+    }
+  },
+  {
+    "id": "nestjs-easy-modules-003",
+    "title": "Organizing with Modules (`@Module`)",
+    "difficulty": "easy",
+    "framework": "NestJS",
+    "frameworkIconText": "NestJS",
+    "tags": [
+      "modules",
+      "@Module",
+      "controllers",
+      "providers",
+      "imports",
+      "exports"
+    ],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "Modules are a fundamental concept in NestJS, used to organize the application structure. A module is a class annotated with the `@Module()` decorator. This decorator takes an object with properties like `controllers`, `providers`, `imports`, and `exports`."
+      },
+      {
+        "type": "code",
+        "language": "typescript",
+        "code": "// src/app.module.ts (Root Module)\nimport { Module } from '@nestjs/common';\nimport { AppController } from './app.controller';\nimport { AppService } from './app.service';\nimport { ItemsModule } from './items/items.module'; // Example feature module\n\n@Module({\n  imports: [ItemsModule], // Import other modules\n  controllers: [AppController], // List of controllers in this module\n  providers: [AppService],    // List of services (providers) in this module\n  // exports: [] // Services to make available to other modules that import this one\n})\nexport class AppModule {}\n\n// src/items/items.module.ts (Feature Module)\n// import { Module } from '@nestjs/common';\n// import { ItemsController } from './items.controller';\n// import { ItemsService } from './items.service';\n// \n// @Module({\n//   controllers: [ItemsController],\n//   providers: [ItemsService],\n//   // exports: [ItemsService] // If ItemsService needs to be used by other modules\n// })\n// export class ItemsModule {}"
+      },
+      {
+        "type": "explanation",
+        "text": "The `AppModule` is the root module. It registers `AppController` and `AppService`. It can also `import` other feature modules (like `ItemsModule`) to bring in their functionality. The `providers` array is where services are declared so they can be injected."
+      }
+    ],
+    "quiz": {
+      "snippet": "@Module({\n  controllers: [ProductController],\n  providers: [ProductService, AnalyticsService]\n})\nexport class ProductModule {}",
+      "questionText": "In a NestJS module definition, what is the `providers` array typically used for?",
+      "options": [
+        "Listing all HTML templates used by the module's components.",
+        "Declaring controllers that handle HTTP requests for this module.",
+        "Registering services (or other injectable classes) that can be injected into other classes within this module (or exported).",
+        "Importing external npm packages."
+      ],
+      "correctOptionIndex": 2,
+      "explanationAfterAnswer": "The `providers` array in the `@Module()` decorator is used to register services, repositories, factories, helpers, etc., that are part of the module. These providers can then be injected into controllers or other services within the same module, or exported for use in other modules."
+    }
+  },
+  {
+    "id": "nestjs-easy-dtos-validation-basics-004",
+    "title": "Data Transfer Objects (DTOs) & Basic Validation",
+    "difficulty": "easy",
+    "framework": "NestJS",
+    "frameworkIconText": "NestJS",
+    "tags": ["dto", "validation", "class-validator", "pipes", "data integrity"],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "Data Transfer Objects (DTOs) are simple classes or interfaces used to define the shape of data, especially for request bodies or response payloads. NestJS often uses DTOs with libraries like `class-validator` and `class-transformer` for data validation and transformation, typically applied using Pipes."
+      },
+      {
+        "type": "code",
+        "language": "typescript",
+        "code": "// src/items/dto/create-item.dto.ts\n// You would need to install class-validator: npm install class-validator class-transformer\nimport { IsString, IsInt, MinLength, IsNotEmpty } from 'class-validator';\n\nexport class CreateItemDto {\n  @IsNotEmpty()\n  @IsString()\n  @MinLength(3)\n  name: string;\n\n  @IsNotEmpty()\n  @IsInt()\n  quantity: number;\n\n  description?: string; // Optional property\n}\n\n// src/items/items.controller.ts (example usage)\n// import { Controller, Post, Body, ValidationPipe } from '@nestjs/common';\n// import { CreateItemDto } from './dto/create-item.dto';\n// \n// @Controller('items')\n// export class ItemsController {\n//   @Post()\n//   create(@Body(new ValidationPipe()) createItemDto: CreateItemDto) {\n//     console.log('Received item:', createItemDto);\n//     // ... logic to create item ...\n//     return { message: 'Item created successfully', item: createItemDto };\n//   }\n// }"
+      },
+      {
+        "type": "explanation",
+        "text": "The `CreateItemDto` class uses decorators from `class-validator` (like `@IsString()`, `@IsInt()`, `@MinLength()`) to define validation rules for its properties. When used with `ValidationPipe` in a controller's method, NestJS will automatically validate the incoming request body against these rules."
+      }
+    ],
+    "quiz": {
+      "snippet": "// create-product.dto.ts\n// export class CreateProductDto {\n//   @IsString()\n//   name: string;\n//   @IsNumber()\n//   price: number;\n// }",
+      "questionText": "What is a primary purpose of using DTOs (Data Transfer Objects) with validation decorators in NestJS?",
+      "options": [
+        "To define the visual appearance of data in the frontend.",
+        "To perform database queries directly.",
+        "To define the expected structure of request/response data and automatically validate incoming data against that structure.",
+        "To manage application-wide configuration settings."
+      ],
+      "correctOptionIndex": 2,
+      "explanationAfterAnswer": "DTOs, especially when combined with validation libraries like `class-validator`, are used to define the shape (schema) for data moving into or out of your application (e.g., request bodies). NestJS can then use pipes (like `ValidationPipe`) to automatically validate incoming data against these DTOs."
+    }
+  },
+  {
+    "id": "nestjs-easy-pipes-validationpipe-005",
+    "title": "Introduction to Pipes: `ValidationPipe`",
+    "difficulty": "easy",
+    "framework": "NestJS",
+    "frameworkIconText": "NestJS",
+    "tags": [
+      "pipes",
+      "ValidationPipe",
+      "data transformation",
+      "validation",
+      "@UsePipes"
+    ],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "Pipes in NestJS are classes annotated with `@Injectable()` that implement the `PipeTransform` interface. They are used for data transformation (e.g., string to integer) and validation. The built-in `ValidationPipe` uses `class-validator` to validate incoming data against DTOs."
+      },
+      {
+        "type": "code",
+        "language": "typescript",
+        "code": "// src/items/items.controller.ts\nimport { Controller, Post, Body, ParseIntPipe, ValidationPipe, UsePipes, Get, Param } from '@nestjs/common';\nimport { CreateItemDto } from './dto/create-item.dto'; // Assumes CreateItemDto from previous example\n\n@Controller('items')\nexport class ItemsController {\n  // Pipe applied to a specific parameter\n  @Post()\n  create(@Body(new ValidationPipe()) createItemDto: CreateItemDto) {\n    return `Received item: ${createItemDto.name}, Quantity: ${createItemDto.quantity}`;\n  }\n\n  // Pipe applied to a route parameter\n  @Get(':id')\n  findOne(@Param('id', ParseIntPipe) id: number) {\n    // 'id' is now guaranteed to be a number or an error would have been thrown\n    return `Fetching item with ID: ${id} (Type: ${typeof id})`;\n  }\n\n  // Pipe applied at the method level (applies to all parameters with DTOs)\n  // @Post('another')\n  // @UsePipes(new ValidationPipe())\n  // createAnother(@Body() createItemDto: CreateItemDto) { /* ... */ }\n}"
+      },
+      {
+        "type": "explanation",
+        "text": "`@Body(new ValidationPipe())` applies the `ValidationPipe` to the `createItemDto` parameter. If validation fails, NestJS automatically returns a 400 Bad Request response. `@Param('id', ParseIntPipe)` uses the built-in `ParseIntPipe` to transform the route parameter `id` into a number (or throws an error if it's not a valid number)."
+      }
+    ],
+    "quiz": {
+      "snippet": "@Post()\ncreate(@Body(ValidationPipe) data: CreateResourceDto) {\n  // ...\n}",
+      "questionText": "If `ValidationPipe` is applied to a `@Body()` parameter in a NestJS controller, what is its main function?",
+      "options": [
+        "To encrypt the request body.",
+        "To transform the request body into XML format.",
+        "To automatically validate the incoming request body against the DTO's validation rules and potentially transform it.",
+        "To log the request body to the console."
+      ],
+      "correctOptionIndex": 2,
+      "explanationAfterAnswer": "The `ValidationPipe` (often used with DTOs decorated with `class-validator` rules) automatically validates the properties of the incoming request body. If validation fails, it throws an exception, typically resulting in a 400 Bad Request response. It can also perform some transformations."
+    }
+  },
+  {
+    "id": "express-easy-basic-server-001",
+    "title": "Creating a Basic Express.js Server",
+    "difficulty": "easy",
+    "framework": "Express.js",
+    "frameworkIconText": "Express",
+    "tags": ["express", "server", "http", "listen", "request", "response"],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "Express.js is a minimal and flexible Node.js web application framework. Setting up a basic server involves requiring Express, creating an app instance, defining a simple route, and listening on a port."
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "code": "// server.js (run with 'node server.js' after 'npm install express')\nconst express = require('express');\nconst app = express(); // Create an Express application\nconst port = 3000;\n\n// Define a route handler for GET requests to the root URL ('/')\napp.get('/', (req, res) => {\n  res.send('Hello from Express!'); // Send a response to the client\n});\n\n// Start the server and listen on the specified port\napp.listen(port, () => {\n  console.log(`Express server listening at http://localhost:${port}`);\n});"
+      },
+      {
+        "type": "explanation",
+        "text": "`require('express')` imports the framework. `express()` creates an application instance. `app.get('/', ...)` defines a route that handles GET requests to the homepage. `res.send()` sends a simple text response. `app.listen()` starts the server."
+      }
+    ],
+    "quiz": {
+      "snippet": "const express = require('express');\nconst app = express();\nconst PORT = 8080;\n\napp.get('/greeting', (request, response) => {\n  response.send('Hi there!');\n});\n\napp.listen(PORT, () => { /* ... */ });",
+      "questionText": "If a GET request is made to `/greeting` on this server, what will the client receive?",
+      "options": [
+        "Hi there!",
+        "Hello from Express!",
+        "An error page",
+        "Nothing"
+      ],
+      "correctOptionIndex": 0,
+      "explanationAfterAnswer": "The route handler for `GET /greeting` uses `response.send('Hi there!')` to send the string 'Hi there!' back to the client."
+    }
+  },
+  {
+    "id": "express-easy-routing-methods-002",
+    "title": "Basic Routing with Different HTTP Methods",
+    "difficulty": "easy",
+    "framework": "Express.js",
+    "frameworkIconText": "Express",
+    "tags": ["express", "routing", "http methods", "get", "post"],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "Express provides methods to handle various HTTP request methods like GET, POST, PUT, DELETE, etc. You define routes by specifying the HTTP method, the URL path, and a callback function (route handler)."
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "code": "const express = require('express');\nconst app = express();\nconst port = 3000;\n\n// Middleware to parse JSON bodies (for POST requests)\napp.use(express.json());\n\n// Handles GET request to /info\napp.get('/info', (req, res) => {\n  res.send('This is info (GET)');\n});\n\n// Handles POST request to /submit\napp.post('/submit', (req, res) => {\n  console.log('Received data:', req.body); // req.body contains parsed JSON data\n  res.send('Data submitted (POST)');\n});\n\napp.listen(port);"
+      },
+      {
+        "type": "explanation",
+        "text": "`app.get('/info', ...)` handles GET requests. `app.post('/submit', ...)` handles POST requests. The `app.use(express.json())` middleware is necessary to parse JSON data sent in the body of POST requests, making it available via `req.body`."
+      }
+    ],
+    "quiz": {
+      "snippet": "app.post('/login', (req, res) => {\n  // Logic for handling login\n  res.send('Login attempt received.');\n});",
+      "questionText": "Which Express app method would you use to define a route handler specifically for HTTP POST requests?",
+      "options": ["app.get()", "app.route()", "app.post()", "app.send()"],
+      "correctOptionIndex": 2,
+      "explanationAfterAnswer": "`app.post('/path', handlerFunction)` is used in Express to define a route handler that specifically responds to HTTP POST requests made to the specified path."
+    }
+  },
+  {
+    "id": "express-easy-static-files-003",
+    "title": "Serving Static Files (e.g., HTML, CSS, Images)",
+    "difficulty": "easy",
+    "framework": "Express.js",
+    "frameworkIconText": "Express",
+    "tags": [
+      "express",
+      "static files",
+      "middleware",
+      "express.static",
+      "public directory"
+    ],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "Express can serve static files like HTML, CSS, client-side JavaScript, and images using the `express.static` built-in middleware. You specify a directory (commonly named `public`) from which to serve these files."
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "code": "// server.js\nconst express = require('express');\nconst path = require('path'); // Node.js path module\nconst app = express();\nconst port = 3000;\n\n// Serve static files from the 'public' directory\napp.use(express.static(path.join(__dirname, 'public')));\n\n// Example: If you have public/index.html, it will be served at '/'\n// If you have public/css/style.css, it will be served at '/css/style.css'\n\napp.get('/api/data', (req, res) => { // An API route\n  res.json({ message: 'Some API data' });\n});\n\napp.listen(port, () => {\n  console.log(`Server running at http://localhost:${port}`);\n  console.log('Serving static files from ./public directory');\n});\n\n// Create a 'public' folder in the same directory as server.js\n// Inside 'public', you can have:\n// - index.html (e.g., <h1>Welcome!</h1>)\n// - css/style.css (e.g., body { background-color: lightblue; })"
+      },
+      {
+        "type": "explanation",
+        "text": "`app.use(express.static('public'))` tells Express to look for requested files in the `public` directory. If a file is found (e.g., `index.html` for `/`, or `css/style.css` for `/css/style.css`), Express serves it directly. `path.join(__dirname, 'public')` creates an absolute path to the public directory."
+      }
+    ],
+    "quiz": {
+      "snippet": "// Assume a file 'images/logo.png' exists inside a 'static_assets' directory.\n// app.use(express.static('static_assets'));",
+      "questionText": "If you serve static files from a directory named 'assets' using `app.use(express.static('assets'));`, and you have an image `assets/img/photo.jpg`, what URL path would you use to access this image?",
+      "options": [
+        "/assets/img/photo.jpg",
+        "/static/img/photo.jpg",
+        "/img/photo.jpg",
+        "img/photo.jpg"
+      ],
+      "correctOptionIndex": 2,
+      "explanationAfterAnswer": "When using `express.static('assets')`, the 'assets' directory itself becomes the root for static file serving. So, a file at `assets/img/photo.jpg` is accessed via the URL path `/img/photo.jpg`."
+    }
+  },
+  {
+    "id": "express-easy-route-parameters-004",
+    "title": "Route Parameters",
+    "difficulty": "easy",
+    "framework": "Express.js",
+    "frameworkIconText": "Express",
+    "tags": [
+      "express",
+      "routing",
+      "route parameters",
+      "req.params",
+      "dynamic routes"
+    ],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "Route parameters are named segments of a URL path, used to capture values from the URL. In Express, you define route parameters by prefixing them with a colon (`:`) in the route path. These values are then available in the `req.params` object."
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "code": "const express = require('express');\nconst app = express();\nconst port = 3000;\n\n// Route with a 'userId' parameter\napp.get('/users/:userId', (req, res) => {\n  const userId = req.params.userId;\n  res.send(`User profile for ID: ${userId}`);\n});\n\n// Route with multiple parameters\napp.get('/books/:bookId/author/:authorId', (req, res) => {\n  const bookId = req.params.bookId;\n  const authorId = req.params.authorId;\n  res.send(`Book ID: ${bookId}, Author ID: ${authorId}`);\n});\n\napp.listen(port);"
+      },
+      {
+        "type": "explanation",
+        "text": "If a request is made to `/users/123`, `req.params.userId` will be `'123'`. If a request is made to `/books/42/author/7`, `req.params.bookId` will be `'42'` and `req.params.authorId` will be `'7'`."
+      }
+    ],
+    "quiz": {
+      "snippet": "app.get('/products/:category/:productId', (req, res) => {\n  const category = req.params.category;\n  const productId = req.params.productId;\n  // ...\n});\n// A GET request is made to /products/electronics/987",
+      "questionText": "For a GET request to `/products/electronics/987` handled by the route `app.get('/products/:category/:productId', ...)` , what will be the value of `req.params.category`?",
+      "options": ["products", "987", "electronics/987", "electronics"],
+      "correctOptionIndex": 3,
+      "explanationAfterAnswer": "Route parameters are captured based on their position and name in the path definition. For `/products/:category/:productId`, the segment 'electronics' corresponds to `:category`, so `req.params.category` will be 'electronics'."
+    }
+  },
+  {
+    "id": "express-easy-basic-middleware-005",
+    "title": "Basic Middleware Function",
+    "difficulty": "easy",
+    "framework": "Express.js",
+    "frameworkIconText": "Express",
+    "tags": ["express", "middleware", "request lifecycle", "next()"],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "Middleware functions in Express are functions that have access to the request object (`req`), the response object (`res`), and the `next` function in the application's request-response cycle. They can execute code, make changes to `req` and `res`, end the cycle, or call the next middleware."
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "code": "const express = require('express');\nconst app = express();\n\n// Simple logger middleware function\nconst myLogger = function (req, res, next) {\n  console.log(`LOGGED: ${req.method} ${req.url} at ${new Date().toLocaleTimeString()}`);\n  next(); // Call next() to pass control to the next middleware or route handler\n};\n\n// Apply the middleware globally to all requests\napp.use(myLogger);\n\napp.get('/', (req, res) => {\n  res.send('Homepage');\n});\n\napp.get('/about', (req, res) => {\n  res.send('About Page');\n});\n\napp.listen(3000);"
+      },
+      {
+        "type": "explanation",
+        "text": "The `myLogger` function is a middleware. `app.use(myLogger)` tells Express to execute `myLogger` for every incoming request before the actual route handler is called. The `next()` function call is crucial to pass control to the subsequent middleware or route handler in the stack. Without it, the request would hang."
+      }
+    ],
+    "quiz": {
+      "snippet": "const simpleAuth = (req, res, next) => {\n  if (req.query.apiKey === '123') {\n    next(); // Allow request\n  } else {\n    res.status(401).send('Unauthorized'); // Deny request\n  }\n};",
+      "questionText": "In an Express middleware function, what is the primary purpose of calling the `next()` function?",
+      "options": [
+        "To immediately send a response to the client.",
+        "To indicate an error occurred in the middleware.",
+        "To pass control to the next middleware function in the stack or to the matched route handler.",
+        "To restart the current middleware function."
+      ],
+      "correctOptionIndex": 2,
+      "explanationAfterAnswer": "The `next()` function is called within a middleware to pass control to the next middleware in the application's request-response cycle. If there are no more middleware functions in the stack for the current route, it passes control to the route handler. If `next()` is not called (and no response is sent), the request will hang."
+    }
+  },
+  {
+    "id": "tailwind-easy-basic-styling-001",
+    "title": "Basic Styling: Text Color & Background Color",
+    "difficulty": "easy",
+    "framework": "Tailwind CSS",
+    "frameworkIconText": "TW",
+    "tags": [
+      "tailwind",
+      "utility classes",
+      "text color",
+      "background color",
+      "styling"
+    ],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "Tailwind CSS is a utility-first CSS framework. You style elements by applying pre-defined utility classes directly in your HTML. For colors, you use classes like `text-color-shade` (e.g., `text-blue-500`) and `bg-color-shade` (e.g., `bg-gray-100`)."
+      },
+      {
+        "type": "code",
+        "language": "html",
+        "code": "<div class=\"bg-yellow-200 p-4\">\n  <h1 class=\"text-purple-700 text-2xl\">Hello Tailwind!</h1>\n  <p class=\"text-gray-800\">\n    This paragraph has a dark gray text color on a light yellow background.\n  </p>\n</div>"
+      },
+      {
+        "type": "explanation",
+        "text": "`bg-yellow-200` sets a light yellow background. `text-purple-700` makes the `<h1>` text a deep purple. `text-gray-800` sets the paragraph text to a dark gray. `p-4` adds padding, and `text-2xl` increases font size."
+      }
+    ],
+    "quiz": {
+      "snippet": "<button class=\"bg-green-500 text-white py-2 px-4 rounded\">\n  Click Me\n</button>",
+      "questionText": "Which Tailwind CSS class in the snippet is responsible for setting the button's text color to white?",
+      "options": ["bg-green-500", "text-white", "py-2", "rounded"],
+      "correctOptionIndex": 1,
+      "explanationAfterAnswer": "The `text-white` utility class sets the `color` CSS property to white for the text inside the button."
+    }
+  },
+  {
+    "id": "tailwind-easy-spacing-padding-margin-002",
+    "title": "Spacing: Padding & Margin",
+    "difficulty": "easy",
+    "framework": "Tailwind CSS",
+    "frameworkIconText": "TW",
+    "tags": ["tailwind", "spacing", "padding", "margin", "utility classes"],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "Tailwind provides utility classes for controlling padding and margin. `p-{size}` for padding on all sides, `px-{size}` for horizontal padding, `py-{size}` for vertical. Similarly, `m-{size}`, `mx-{size}`, `my-{size}` for margins. Sizes typically range from 0 up to 96, corresponding to `rem` or `px` values."
+      },
+      {
+        "type": "code",
+        "language": "html",
+        "code": "<div class=\"bg-slate-100 p-6\">\n  <!-- p-6 means padding: 1.5rem on all sides -->\n  <div class=\"bg-white mb-4 p-4\">\n    <!-- mb-4 means margin-bottom: 1rem -->\n    <!-- p-4 means padding: 1rem on all sides -->\n    Content Box 1\n  </div>\n  <div class=\"bg-white mt-2 pt-3 pb-1 px-5\">\n    <!-- mt-2: margin-top: 0.5rem -->\n    <!-- pt-3: padding-top: 0.75rem -->\n    <!-- pb-1: padding-bottom: 0.25rem -->\n    <!-- px-5: padding-left: 1.25rem, padding-right: 1.25rem -->\n    Content Box 2\n  </div>\n</div>"
+      },
+      {
+        "type": "explanation",
+        "text": "For example, `p-6` applies `padding: 1.5rem;`. `mb-4` applies `margin-bottom: 1rem;`. You can also target specific sides: `pt-` (top), `pr-` (right), `pb-` (bottom), `pl-` (left)."
+      }
+    ],
+    "quiz": {
+      "snippet": "<div class=\"m-8 p-4 bg-blue-100\">\n  Some text\n</div>",
+      "questionText": "What does the class `m-8` apply to the `div` element?",
+      "options": [
+        "Padding of 2rem on all sides",
+        "Margin of 2rem on all sides",
+        "Padding of 8px on all sides",
+        "Margin of 8px on all sides"
+      ],
+      "correctOptionIndex": 1,
+      "explanationAfterAnswer": "The `m-8` utility class in Tailwind applies `margin: 2rem;` to all sides of the element. (Tailwind's spacing scale typically means `8` corresponds to `2rem`)."
+    }
+  },
+  {
+    "id": "tailwind-easy-flexbox-basics-003",
+    "title": "Basic Flexbox Layout",
+    "difficulty": "easy",
+    "framework": "Tailwind CSS",
+    "frameworkIconText": "TW",
+    "tags": [
+      "tailwind",
+      "flexbox",
+      "layout",
+      "flex",
+      "justify-content",
+      "items-align"
+    ],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "Tailwind makes working with Flexbox straightforward. Apply the `flex` class to an element to make it a flex container. Then use classes like `justify-center`, `items-center`, `flex-row`, `flex-col` to control alignment and direction."
+      },
+      {
+        "type": "code",
+        "language": "html",
+        "code": "<div class=\"flex justify-between items-center bg-gray-200 p-4 h-20\">\n  <!-- justify-between: space between items -->\n  <!-- items-center: vertically center items -->\n  <div class=\"bg-red-400 p-2\">Left Item</div>\n  <div class=\"bg-green-400 p-2\">Middle Item</div>\n  <div class=\"bg-blue-400 p-2\">Right Item</div>\n</div>\n\n<div class=\"flex flex-col items-start bg-indigo-200 p-4 mt-4\">\n  <!-- flex-col: stack items vertically -->\n  <!-- items-start: align items to the start (left) of the cross axis -->\n  <div class=\"bg-pink-400 p-2 mb-1\">Item 1</div>\n  <div class=\"bg-purple-400 p-2\">Item 2</div>\n</div>"
+      },
+      {
+        "type": "explanation",
+        "text": "The first `div` uses `flex justify-between items-center` to distribute its children with space between them and align them vertically in the center. The second `div` uses `flex flex-col items-start` to stack children vertically and align them to the start (left in this case)."
+      }
+    ],
+    "quiz": {
+      "snippet": "<div class=\"flex justify-center items-center h-screen\">\n  <p>Centered Content</p>\n</div>",
+      "questionText": "What is the effect of `justify-center` and `items-center` on the `<p>` tag within the flex container?",
+      "options": [
+        "Aligns text to the center within the paragraph",
+        "Makes the paragraph take up the full width and height",
+        "Horizontally and vertically centers the paragraph within its flex container",
+        "Adds a border around the paragraph"
+      ],
+      "correctOptionIndex": 2,
+      "explanationAfterAnswer": "`justify-center` horizontally centers flex items along the main axis. `items-center` vertically centers flex items along the cross axis. Together, they center the `<p>` tag within the `div`."
+    }
+  },
+  {
+    "id": "tailwind-easy-sizing-width-height-004",
+    "title": "Sizing: Width and Height",
+    "difficulty": "easy",
+    "framework": "Tailwind CSS",
+    "frameworkIconText": "TW",
+    "tags": ["tailwind", "sizing", "width", "height", "w-full", "h-screen"],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "Tailwind provides utilities for setting width (`w-`) and height (`h-`). These can be fixed values (e.g., `w-32` for `width: 8rem`), percentages (e.g., `w-1/2` for `width: 50%`), or special values like `w-full` (100% width) and `h-screen` (100% viewport height)."
+      },
+      {
+        "type": "code",
+        "language": "html",
+        "code": "<div class=\"bg-gray-300 p-2\">\n  <div class=\"w-1/2 bg-sky-200 p-4 mb-2\">\n    This div is 50% of its parent's width (w-1/2).\n  </div>\n  <div class=\"w-full bg-lime-200 p-4 mb-2\">\n    This div is 100% of its parent's width (w-full).\n  </div>\n  <div class=\"w-64 bg-rose-200 p-4\">\n    This div has a fixed width of 16rem (w-64).\n  </div>\n</div>\n\n<!-- Full viewport height example -->\n<!-- <div class=\"h-screen bg-teal-100 flex items-center justify-center\">\n  <p>This div takes up the full screen height.</p>\n</div> -->"
+      },
+      {
+        "type": "explanation",
+        "text": "`w-1/2` sets width to 50%. `w-full` sets width to 100%. `w-64` sets width to `16rem`. `h-screen` sets height to `100vh` (100% of the viewport height)."
+      }
+    ],
+    "quiz": {
+      "snippet": "<div class=\"w-full max-w-lg mx-auto bg-white p-8\">\n  <!-- Content -->\n</div>",
+      "questionText": "What is the effect of the `w-full` class on the `div`?",
+      "options": [
+        "Sets the width to the full screen width.",
+        "Sets the width to 100% of its parent container's width.",
+        "Sets a fixed width of 100 pixels.",
+        "Sets the maximum width to 100%."
+      ],
+      "correctOptionIndex": 1,
+      "explanationAfterAnswer": "`w-full` sets the CSS property `width: 100%;`, making the element take up the full available width of its direct parent container. `max-w-lg` then limits this width, and `mx-auto` centers it if the parent is wider."
+    }
+  },
+  {
+    "id": "tailwind-easy-responsive-design-prefixes-005",
+    "title": "Basic Responsive Design with Prefixes",
+    "difficulty": "easy",
+    "framework": "Tailwind CSS",
+    "frameworkIconText": "TW",
+    "tags": [
+      "tailwind",
+      "responsive design",
+      "breakpoints",
+      "sm:",
+      "md:",
+      "lg:"
+    ],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "Tailwind uses a mobile-first approach. Utility classes apply to all screen sizes by default. To apply a utility only at a specific breakpoint and above, you prefix it with the breakpoint name (e.g., `md:text-lg`). Common breakpoints are `sm` (small), `md` (medium), `lg` (large), `xl` (extra large)."
+      },
+      {
+        "type": "code",
+        "language": "html",
+        "code": "<div class=\"bg-blue-500 p-4 text-white md:bg-green-500 lg:bg-red-500\">\n  <p class=\"text-sm sm:text-base md:text-lg lg:text-xl\">\n    My background and text size change based on screen width!\n  </p>\n  <div class=\"w-full md:w-1/2 lg:w-1/3 bg-gray-700 mt-4 p-2\">\n    This box also changes width.\n  </div>\n</div>\n\n<!-- \nBreakpoints (default):\n- sm: min-width: 640px\n- md: min-width: 768px\n- lg: min-width: 1024px\n- xl: min-width: 1280px\n-->"
+      },
+      {
+        "type": "explanation",
+        "text": "The first `div` is blue by default. On medium screens (`md:`) and up, it becomes green. On large screens (`lg:`) and up, it becomes red. Similarly, the text size and the width of the inner `div` change at different breakpoints."
+      }
+    ],
+    "quiz": {
+      "snippet": "<button class=\"bg-purple-600 p-2 md:p-4 text-white\">\n  Responsive Button\n</button>",
+      "questionText": "How will the padding of this button change on a medium-sized screen (and larger) compared to a small screen?",
+      "options": [
+        "Padding will be `p-2` on small screens, and also `p-2` on medium screens.",
+        "Padding will be `p-4` on small screens, and `p-2` on medium screens.",
+        "Padding will be `p-2` on small screens, and `p-4` on medium screens.",
+        "Padding will be `p-4` on all screen sizes."
+      ],
+      "correctOptionIndex": 2,
+      "explanationAfterAnswer": "The class `p-2` applies by default (mobile-first). The class `md:p-4` applies only at the `md` breakpoint (medium screens, typically 768px) and above, overriding the `p-2`. So, it will have `p-2` padding on small screens and `p-4` padding on medium and larger screens."
+    }
+  },
+  {
+    "id": "bootstrap-easy-basic-button-001",
+    "title": "Basic Buttons & Colors",
+    "difficulty": "easy",
+    "framework": "Bootstrap",
+    "frameworkIconText": "BS",
+    "tags": ["bootstrap", "buttons", "styling", "colors", "btn", "btn-primary"],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "Bootstrap provides pre-styled button components. You apply the base class `.btn` and then a contextual color class like `.btn-primary`, `.btn-secondary`, `.btn-success`, etc., to get different appearances."
+      },
+      {
+        "type": "code",
+        "language": "html",
+        "code": "<!-- Include Bootstrap CSS in your <head> -->\n<!-- <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css\" rel=\"stylesheet\"> -->\n\n<button type=\"button\" class=\"btn btn-primary\">Primary Button</button>\n<button type=\"button\" class=\"btn btn-secondary\">Secondary Button</button>\n<button type=\"button\" class=\"btn btn-success\">Success Button</button>\n<button type=\"button\" class=\"btn btn-danger\">Danger Button</button>\n<button type=\"button\" class=\"btn btn-warning\">Warning Button</button>\n<button type=\"button\" class=\"btn btn-info\">Info Button</button>\n<button type=\"button\" class=\"btn btn-light\">Light Button</button>\n<button type=\"button\" class=\"btn btn-dark\">Dark Button</button>\n<button type=\"button\" class=\"btn btn-link\">Link Button</button>"
+      },
+      {
+        "type": "explanation",
+        "text": "The `.btn` class provides basic button styling (padding, border, etc.). Classes like `.btn-primary` (blue), `.btn-success` (green), etc., add specific background colors, border colors, and text colors defined in Bootstrap's theme."
+      }
+    ],
+    "quiz": {
+      "snippet": "<button type=\"button\" class=\"btn btn-lg btn-warning\">Large Warning</button>",
+      "questionText": "Which Bootstrap class in the snippet is primarily responsible for the button's yellow-ish appearance?",
+      "options": ["btn", "btn-lg", "btn-warning", "button"],
+      "correctOptionIndex": 2,
+      "explanationAfterAnswer": "The `.btn-warning` class is a contextual Bootstrap class that styles the button with a warning theme, which typically includes a yellow or orange background color."
+    }
+  },
+  {
+    "id": "bootstrap-easy-grid-system-002",
+    "title": "Basic Grid System: Rows and Columns",
+    "difficulty": "easy",
+    "framework": "Bootstrap",
+    "frameworkIconText": "BS",
+    "tags": ["bootstrap", "grid system", "layout", "row", "col", "responsive"],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "Bootstrap's grid system uses a series of containers, rows, and columns to lay out and align content. It's built with flexbox and is fully responsive. Columns are defined within a `.row`."
+      },
+      {
+        "type": "code",
+        "language": "html",
+        "code": "<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col\">\n      1 of 2 (佔用剩餘空間)\n    </div>\n    <div class=\"col\">\n      2 of 2 (佔用剩餘空間)\n    </div>\n  </div>\n  <div class=\"row mt-3\">\n    <div class=\"col-md-8 bg-light p-2\">Takes 8 of 12 columns on medium screens and up</div>\n    <div class=\"col-md-4 bg-secondary text-white p-2\">Takes 4 of 12 columns on medium screens and up</div>\n  </div>\n  <div class=\"row mt-3\">\n    <div class=\"col-sm-6 col-lg-3 bg-info p-2\">Col A</div>\n    <div class=\"col-sm-6 col-lg-3 bg-success p-2\">Col B</div>\n    <div class=\"col-sm-6 col-lg-3 bg-warning p-2\">Col C</div>\n    <div class=\"col-sm-6 col-lg-3 bg-danger p-2\">Col D</div>\n  </div>\n</div>"
+      },
+      {
+        "type": "explanation",
+        "text": "A `.container` provides a centered, fixed-width layout (or `.container-fluid` for full width). `.row` creates a horizontal group of columns. `.col` creates an auto-width column. `.col-md-8` means the column will take up 8 out of 12 available column units on medium (`md`) screens and larger. You can combine classes for different breakpoints (e.g., `col-sm-6 col-lg-3`)."
+      }
+    ],
+    "quiz": {
+      "snippet": "<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-6\">Left Half</div>\n    <div class=\"col-6\">Right Half</div>\n  </div>\n</div>",
+      "questionText": "In Bootstrap's 12-column grid system, what does the class `col-6` typically mean for an element?",
+      "options": [
+        "It will have a padding of 6 units.",
+        "It will span 6 of the available 12 columns, taking up half the width of its row.",
+        "It will be 6 pixels wide.",
+        "It will be the 6th column in the row."
+      ],
+      "correctOptionIndex": 1,
+      "explanationAfterAnswer": "Bootstrap's grid is based on 12 columns. `col-6` means the element will span 6 out of these 12 columns, effectively taking up 50% of the available width within its parent `.row`."
+    }
+  },
+  {
+    "id": "bootstrap-easy-alerts-003",
+    "title": "Displaying Alerts",
+    "difficulty": "easy",
+    "framework": "Bootstrap",
+    "frameworkIconText": "BS",
+    "tags": ["bootstrap", "alerts", "feedback", "alert-success", "dismissible"],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "Alerts provide contextual feedback messages for typical user actions. Bootstrap offers several predefined alert styles, like success, info, warning, and danger."
+      },
+      {
+        "type": "code",
+        "language": "html",
+        "code": "<div class=\"alert alert-success\" role=\"alert\">\n  A simple success alert—check it out!\n</div>\n<div class=\"alert alert-danger alert-dismissible fade show\" role=\"alert\">\n  <strong>Oh snap!</strong> You got an error.\n  <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\" aria-label=\"Close\"></button>\n</div>\n<div class=\"alert alert-info d-flex align-items-center\" role=\"alert\">\n  <!-- SVG icon could go here -->\n  <div>\n    An example alert with an icon (icon not shown for brevity)\n  </div>\n</div>\n\n<!-- Requires Bootstrap JS for dismissible alerts to work -->\n<!-- <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js\"></script> -->"
+      },
+      {
+        "type": "explanation",
+        "text": "The base class is `.alert`, and contextual classes like `.alert-success` or `.alert-danger` provide the styling. For dismissible alerts, you add `.alert-dismissible`, a close button with `class=\"btn-close\"` and `data-bs-dismiss=\"alert\"`. Bootstrap's JavaScript is needed for the dismiss functionality."
+      }
+    ],
+    "quiz": {
+      "snippet": "<div class=\"alert alert-warning\" role=\"alert\">\n  Please update your profile.\n</div>",
+      "questionText": "Which Bootstrap class is primarily responsible for the yellowish appearance of this alert, indicating a warning?",
+      "options": [
+        "alert",
+        "role=\"alert\"",
+        "alert-warning",
+        "profile-warning"
+      ],
+      "correctOptionIndex": 2,
+      "explanationAfterAnswer": "The `.alert-warning` class provides the specific styling for a warning alert, which typically includes a yellow or orange background and appropriate text/border colors."
+    }
+  },
+  {
+    "id": "bootstrap-easy-text-utilities-004",
+    "title": "Text Alignment and Transformation",
+    "difficulty": "easy",
+    "framework": "Bootstrap",
+    "frameworkIconText": "BS",
+    "tags": [
+      "bootstrap",
+      "text utilities",
+      "text-center",
+      "text-uppercase",
+      "font-weight-bold"
+    ],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "Bootstrap provides utility classes for quick text formatting, including alignment, transformation (uppercase, lowercase, capitalize), weight, and style."
+      },
+      {
+        "type": "code",
+        "language": "html",
+        "code": "<p class=\"text-center\">Centered text.</p>\n<p class=\"text-start\">Start aligned text (left in LTR, right in RTL).</p>\n<p class=\"text-end\">End aligned text (right in LTR, left in RTL).</p>\n\n<p class=\"text-lowercase\">LOWERCASED TEXT.</p>\n<p class=\"text-uppercase\">uppercased text.</p>\n<p class=\"text-capitalize\">capitalize this text.</p>\n\n<p class=\"fw-bold\">Bold text. (fw-bold for font-weight bold)</p>\n<p class=\"fw-normal\">Normal weight text.</p>\n<p class=\"fst-italic\">Italic text. (fst-italic for font-style italic)</p>"
+      },
+      {
+        "type": "explanation",
+        "text": "Classes like `text-center`, `text-uppercase`, `fw-bold` (Bootstrap 5, replaces `.font-weight-bold`), and `fst-italic` (Bootstrap 5, replaces `.font-italic`) allow you to quickly style text without writing custom CSS."
+      }
+    ],
+    "quiz": {
+      "snippet": "<h3 class=\"text-center text-success fw-bold\">Important Announcement</h3>",
+      "questionText": "Which class in the snippet makes the text bold?",
+      "options": ["text-center", "text-success", "fw-bold", "h3"],
+      "correctOptionIndex": 2,
+      "explanationAfterAnswer": "The `fw-bold` class in Bootstrap 5 is used to set the `font-weight` to bold. (In Bootstrap 4 and earlier, it was `.font-weight-bold`)."
+    }
+  },
+  {
+    "id": "bootstrap-easy-spacing-utilities-005",
+    "title": "Spacing Utilities (Margin and Padding)",
+    "difficulty": "easy",
+    "framework": "Bootstrap",
+    "frameworkIconText": "BS",
+    "tags": [
+      "bootstrap",
+      "spacing",
+      "margin",
+      "padding",
+      "m-1",
+      "pt-2",
+      "mx-auto"
+    ],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "Bootstrap offers a wide range of shorthand responsive margin (`m-`) and padding (`p-`) utility classes to modify an element's appearance. These utilities use a scale from 0 to 5, and can also target specific sides or axes."
+      },
+      {
+        "type": "code",
+        "language": "html",
+        "code": "<div class=\"m-3 bg-light p-1\">Margin on all sides (m-3), Padding on all sides (p-1)</div>\n<div class=\"mt-4 mb-2 bg-light\">Margin top (mt-4), Margin bottom (mb-2)</div>\n<div class=\"ps-5 pe-1 bg-light\">Padding start (ps-5), Padding end (pe-1)</div>\n<div class=\"mx-auto my-4 w-50 bg-primary text-white p-3\">\n  Horizontally centered (mx-auto), margin top/bottom (my-4), 50% width (w-50)\n</div>"
+      },
+      {
+        "type": "explanation",
+        "text": "`m-3` sets margin on all sides. `mt-4` sets `margin-top`. `ps-5` sets `padding-left` (or `padding-right` in RTL). `mx-auto` is used for horizontally centering block-level content with a defined width. The numbers (0-5) correspond to predefined spacing values (e.g., 3 is typically `1rem`)."
+      }
+    ],
+    "quiz": {
+      "snippet": "<div class=\"pt-5 pb-3 px-4 bg-info\">Content Box</div>",
+      "questionText": "What does the class `pt-5` apply to the div?",
+      "options": [
+        "Padding of 5px on all sides",
+        "Padding-top of 5rem",
+        "Padding-top corresponding to Bootstrap's spacing scale level 5 (typically 3rem)",
+        "Margin-top of 5 units"
+      ],
+      "correctOptionIndex": 2,
+      "explanationAfterAnswer": "`pt-5` is a Bootstrap spacing utility that applies `padding-top`. The '5' refers to a step in Bootstrap's spacing scale, which usually corresponds to `3rem` by default."
+    }
+  },
+  {
+    "id": "bulma-easy-basic-button-001",
+    "title": "Basic Buttons & Colors",
+    "difficulty": "easy",
+    "framework": "Bulma",
+    "frameworkIconText": "Bulma",
+    "tags": ["bulma", "buttons", "styling", "colors", "button", "is-primary"],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "Bulma provides a variety of pre-styled button components. You apply the base class `button` and then a contextual color class like `is-primary`, `is-link`, `is-success`, etc., to get different appearances. Size modifiers like `is-small`, `is-medium`, `is-large` are also available."
+      },
+      {
+        "type": "code",
+        "language": "html",
+        "code": "<!-- Include Bulma CSS in your <head> -->\n<!-- <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css\"> -->\n\n<button class=\"button is-primary\">Primary</button>\n<button class=\"button is-link\">Link</button>\n<button class=\"button is-info is-light\">Info Light</button>\n<button class=\"button is-success is-outlined\">Success Outlined</button>\n<button class=\"button is-warning is-rounded\">Warning Rounded</button>\n<button class=\"button is-danger is-loading\">Danger Loading</button> <!-- 'is-loading' adds a spinner -->\n<button class=\"button is-dark is-small\">Dark Small</button>"
+      },
+      {
+        "type": "explanation",
+        "text": "The `button` class provides basic button styling (padding, border, etc.). Classes like `is-primary` (often teal/blue), `is-success` (green) add specific colors. Modifiers like `is-light` make the button use a lighter version of the contextual color. `is-outlined` creates an outlined button, and `is-rounded` makes it pill-shaped."
+      }
+    ],
+    "quiz": {
+      "snippet": "<a class=\"button is-danger is-large\">Delete Action</a>",
+      "questionText": "Which Bulma class in the snippet is primarily responsible for the button's red appearance, indicating a potentially destructive action?",
+      "options": ["button", "is-large", "is-danger", "a"],
+      "correctOptionIndex": 2,
+      "explanationAfterAnswer": "The `is-danger` class is a contextual Bulma class that styles the button with a danger theme, which typically includes a red background color."
+    }
+  },
+  {
+    "id": "bulma-easy-columns-layout-002",
+    "title": "Basic Grid Layout with Columns",
+    "difficulty": "easy",
+    "framework": "Bulma",
+    "frameworkIconText": "Bulma",
+    "tags": ["bulma", "columns", "grid", "layout", "is-half", "responsive"],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "Bulma's column system is built with flexbox and is very powerful for creating responsive layouts. You wrap columns in a `columns` container, and individual columns use the `column` class. You can specify column sizes like `is-half`, `is-one-third`, or use a 12-column system (`is-6-tablet`)."
+      },
+      {
+        "type": "code",
+        "language": "html",
+        "code": "<div class=\"columns\">\n  <div class=\"column is-half has-background-primary-light p-3\">\n    First column (is-half)\n  </div>\n  <div class=\"column has-background-info-light p-3\">\n    Second column (auto-sizes to fill remaining space)\n  </div>\n  <div class=\"column has-background-success-light p-3\">\n    Third column (auto-sizes)\n  </div>\n</div>\n\n<div class=\"columns is-multiline is-mobile mt-4\">\n  <div class=\"column is-one-quarter-desktop is-half-tablet is-full-mobile has-background-warning-light p-3\">\n    Responsive Column 1\n  </div>\n  <div class=\"column is-one-quarter-desktop is-half-tablet is-full-mobile has-background-link-light p-3\">\n    Responsive Column 2\n  </div>\n  <div class=\"column is-one-quarter-desktop is-half-tablet is-full-mobile has-background-danger-light p-3\">\n    Responsive Column 3\n  </div>\n  <div class=\"column is-one-quarter-desktop is-half-tablet is-full-mobile has-background-grey-lighter p-3\">\n    Responsive Column 4\n  </div>\n</div>"
+      },
+      {
+        "type": "explanation",
+        "text": "A `columns` div acts as the flex container. `column` divs are flex items. `is-half` makes a column take up 50% width. Responsive classes like `is-one-quarter-desktop` (25% on desktop and up) and `is-half-tablet` (50% on tablet and up) allow for adaptive layouts. `is-multiline` allows columns to wrap to the next line."
+      }
+    ],
+    "quiz": {
+      "snippet": "<div class=\"columns\">\n  <div class=\"column is-two-thirds\">Main Content</div>\n  <div class=\"column\">Sidebar</div>\n</div>",
+      "questionText": "What portion of the available width will the 'Main Content' div occupy due to the `is-two-thirds` class?",
+      "options": ["One third", "Half", "Two thirds", "Full width"],
+      "correctOptionIndex": 2,
+      "explanationAfterAnswer": "The `is-two-thirds` class in Bulma makes the column take up two-thirds of the available width within its parent `columns` container."
+    }
+  },
+  {
+    "id": "bulma-easy-notifications-003",
+    "title": "Displaying Notifications",
+    "difficulty": "easy",
+    "framework": "Bulma",
+    "frameworkIconText": "Bulma",
+    "tags": ["bulma", "notifications", "feedback", "is-warning", "delete"],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "Notifications are versatile alert boxes that can provide contextual feedback messages to users. Bulma offers various colors for different states like primary, link, info, success, warning, and danger."
+      },
+      {
+        "type": "code",
+        "language": "html",
+        "code": "<!-- Include Bulma CSS in your <head> -->\n<!-- <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css\"> -->\n\n<div class=\"notification is-primary\">\n  <button class=\"delete\"></button> <!-- Optional close button -->\n  This is a primary notification.\n</div>\n\n<div class=\"notification is-warning\">\n  <button class=\"delete\"></button>\n  Warning! Please check your input.\n</div>\n\n<div class=\"notification is-danger is-light\">\n  <button class=\"delete\"></button>\n  Error! Something went wrong.\n</div>"
+      },
+      {
+        "type": "explanation",
+        "text": "The base class is `notification`. Contextual color classes like `is-primary`, `is-warning`, or `is-danger` provide styling. The `is-light` modifier can be used with a color class for a lighter version. A `delete` button can be added for dismissing the notification (requires JavaScript for functionality, which Bulma itself doesn't provide for this component by default)."
+      }
+    ],
+    "quiz": {
+      "snippet": "<div class=\"notification is-success\">\n  Profile updated successfully!\n</div>",
+      "questionText": "Which Bulma class is primarily responsible for the green appearance of this notification, indicating success?",
+      "options": ["notification", "is-success", "profile-success", "message"],
+      "correctOptionIndex": 1,
+      "explanationAfterAnswer": "The `is-success` class provides the specific styling for a success notification in Bulma, which typically includes a green background and appropriate text/border colors."
+    }
+  },
+  {
+    "id": "bulma-easy-text-utilities-004",
+    "title": "Text Alignment and Transformation",
+    "difficulty": "easy",
+    "framework": "Bulma",
+    "frameworkIconText": "Bulma",
+    "tags": [
+      "bulma",
+      "text utilities",
+      "has-text-centered",
+      "is-uppercase",
+      "has-text-weight-bold"
+    ],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "Bulma provides helper classes for quick text formatting, including alignment, transformation (uppercase, lowercase, capitalize), weight, and style."
+      },
+      {
+        "type": "code",
+        "language": "html",
+        "code": "<p class=\"has-text-centered\">Centered text.</p>\n<p class=\"has-text-left\">Left aligned text.</p>\n<p class=\"has-text-right\">Right aligned text.</p>\n\n<p class=\"is-lowercase\">LOWERCASED TEXT.</p>\n<p class=\"is-uppercase\">uppercased text.</p>\n<p class=\"is-capitalized\">capitalize this text.</p>\n\n<p class=\"has-text-weight-bold\">Bold text.</p>\n<p class=\"has-text-weight-normal\">Normal weight text.</p>\n<p class=\"is-italic\">Italic text.</p>"
+      },
+      {
+        "type": "explanation",
+        "text": "Classes like `has-text-centered`, `is-uppercase`, `has-text-weight-bold`, and `is-italic` allow you to quickly style text without writing custom CSS."
+      }
+    ],
+    "quiz": {
+      "snippet": "<h3 class=\"has-text-centered is-success has-text-weight-bold\">Important Announcement</h3>",
+      "questionText": "Which class in the snippet makes the text bold?",
+      "options": [
+        "has-text-centered",
+        "is-success",
+        "has-text-weight-bold",
+        "h3"
+      ],
+      "correctOptionIndex": 2,
+      "explanationAfterAnswer": "The `has-text-weight-bold` class in Bulma is used to set the `font-weight` to bold."
+    }
+  },
+  {
+    "id": "bulma-easy-spacing-helpers-005",
+    "title": "Spacing Helpers (Margin and Padding)",
+    "difficulty": "easy",
+    "framework": "Bulma",
+    "frameworkIconText": "Bulma",
+    "tags": ["bulma", "spacing", "margin", "padding", "m-1", "pt-2", "mx-auto"],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "Bulma offers spacing helpers for applying margin and padding. The format is `m` for margin, `p` for padding, followed by a direction (`t, r, b, l, x, y`) and a size (0-6). For example, `mt-1` for margin-top size 1, `px-3` for padding left/right size 3."
+      },
+      {
+        "type": "code",
+        "language": "html",
+        "code": "<div class=\"m-3 has-background-light p-1\">Margin on all sides (m-3), Padding on all sides (p-1)</div>\n<div class=\"mt-4 mb-2 has-background-light\">Margin top (mt-4), Margin bottom (mb-2)</div>\n<div class=\"pl-5 pr-1 has-background-light\">Padding left (pl-5), Padding right (pr-1)</div>\n<div class=\"mx-auto my-4 has-background-primary has-text-white p-3\" style=\"width: 50%;\">\n  Horizontally centered (mx-auto), margin top/bottom (my-4)\n</div>"
+      },
+      {
+        "type": "explanation",
+        "text": "`m-3` sets margin on all sides. `mt-4` sets `margin-top`. `pl-5` sets `padding-left`. `mx-auto` is used for horizontally centering block-level content that has a defined width. The numbers (0-6) correspond to predefined spacing values (e.g., 3 is typically `1rem`, 4 is `1.5rem`, 5 is `3rem`)."
+      }
+    ],
+    "quiz": {
+      "snippet": "<div class=\"pt-5 pb-3 px-4 has-background-info\">Content Box</div>",
+      "questionText": "What does the class `pt-5` apply to the div?",
+      "options": [
+        "Padding of 5px on all sides",
+        "Padding-top of 5rem",
+        "Padding-top corresponding to Bulma's spacing scale level 5 (typically 3rem)",
+        "Margin-top of 5 units"
+      ],
+      "correctOptionIndex": 2,
+      "explanationAfterAnswer": "`pt-5` is a Bulma spacing helper that applies `padding-top`. The '5' refers to a step in Bulma's spacing scale, which is `3rem` by default for size 5."
+    }
+  },
+  {
+    "id": "threejs-easy-scene-camera-renderer-001",
+    "title": "Basic Scene, Camera, and Renderer",
+    "difficulty": "easy",
+    "framework": "Three.js",
+    "frameworkIconText": "3D",
+    "tags": ["threejs", "scene", "camera", "renderer", "basics", "3d setup"],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "To get started with Three.js, you need three core components: a `Scene` to hold your objects, a `Camera` to view the scene, and a `WebGLRenderer` to display the scene in an HTML canvas."
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "code": "// Basic HTML setup: <body style=\"margin:0;\"><canvas id=\"myCanvas\"></canvas></body>\n// Import Three.js (e.g., via CDN or npm import * as THREE from 'three';)\n\n// 1. Scene\nconst scene = new THREE.Scene();\nscene.background = new THREE.Color(0xeeeeee); // Light gray background\n\n// 2. Camera\n// PerspectiveCamera(field of view, aspect ratio, near clip, far clip)\nconst camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);\ncamera.position.z = 5; // Move camera back a bit\n\n// 3. Renderer\nconst renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('myCanvas'), antialias: true });\nrenderer.setSize(window.innerWidth, window.innerHeight);\n\n// Animation loop (or render once)\nfunction animate() {\n  requestAnimationFrame(animate);\n  // Any updates to objects or camera would go here\n  renderer.render(scene, camera);\n}\n\n// Handle window resize\nwindow.addEventListener('resize', () => {\n  camera.aspect = window.innerWidth / window.innerHeight;\n  camera.updateProjectionMatrix();\n  renderer.setSize(window.innerWidth, window.innerHeight);\n});\n\nanimate();"
+      },
+      {
+        "type": "explanation",
+        "text": "A `Scene` acts as a container. A `PerspectiveCamera` mimics how the human eye sees. The `WebGLRenderer` draws the scene from the camera's viewpoint onto an HTML `<canvas>`. The `animate` function creates a loop to continuously render the scene, allowing for animations."
+      }
+    ],
+    "quiz": {
+      "snippet": "const scene = new THREE.Scene();\nconst camera = new THREE.PerspectiveCamera(75, aspectRatio, 0.1, 1000);\nconst renderer = new THREE.WebGLRenderer();\nrenderer.render(scene, camera);",
+      "questionText": "Which Three.js component is responsible for actually drawing the 3D scene onto a 2D HTML canvas?",
+      "options": [
+        "THREE.Scene",
+        "THREE.PerspectiveCamera",
+        "THREE.WebGLRenderer",
+        "THREE.Mesh"
+      ],
+      "correctOptionIndex": 2,
+      "explanationAfterAnswer": "The `THREE.WebGLRenderer` takes the `scene` and `camera` information and uses WebGL to render the 2D image that is displayed on the HTML `<canvas>` element."
+    }
+  },
+  {
+    "id": "threejs-easy-basic-geometry-material-mesh-002",
+    "title": "Creating a Simple Mesh (Cube)",
+    "difficulty": "easy",
+    "framework": "Three.js",
+    "frameworkIconText": "3D",
+    "tags": [
+      "threejs",
+      "mesh",
+      "geometry",
+      "material",
+      "BoxGeometry",
+      "MeshBasicMaterial"
+    ],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "In Three.js, visible objects are typically `Mesh` objects. A `Mesh` requires two things: a `Geometry` (the shape of the object) and a `Material` (how the object looks, e.g., its color and texture)."
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "code": "// Assume scene, camera, renderer are set up from previous example\n\n// 1. Geometry (the shape)\nconst geometry = new THREE.BoxGeometry(1, 1, 1); // Width, height, depth\n\n// 2. Material (the appearance)\nconst material = new THREE.MeshBasicMaterial({ color: 0x00ff00 }); // Green color\n// MeshBasicMaterial is not affected by lights.\n\n// 3. Mesh (combines geometry and material)\nconst cube = new THREE.Mesh(geometry, material);\n\n// 4. Add mesh to the scene\nscene.add(cube);\n\n// Optional: Animate the cube in the animate loop\n// function animate() {\n//   requestAnimationFrame(animate);\n//   cube.rotation.x += 0.01;\n//   cube.rotation.y += 0.01;\n//   renderer.render(scene, camera);\n// }\n// animate();"
+      },
+      {
+        "type": "explanation",
+        "text": "`THREE.BoxGeometry(width, height, depth)` creates a cube shape. `THREE.MeshBasicMaterial({ color: 0x00ff00 })` creates a simple green material that doesn't react to lights. The `cube` (a `Mesh`) is then added to the `scene` to be rendered."
+      }
+    ],
+    "quiz": {
+      "snippet": "const sphereGeo = new THREE.SphereGeometry(1, 32, 16);\nconst redMaterial = new THREE.MeshBasicMaterial({ color: 0xff0000 });\nconst mySphere = new THREE.Mesh(sphereGeo, redMaterial);",
+      "questionText": "What two main components are combined to create a `THREE.Mesh` object?",
+      "options": [
+        "A Scene and a Camera",
+        "A Light and a Shadow",
+        "A Geometry (shape) and a Material (appearance)",
+        "A Renderer and a Canvas"
+      ],
+      "correctOptionIndex": 2,
+      "explanationAfterAnswer": "A `THREE.Mesh` in Three.js is an object that represents a 3D shape in the scene. It's constructed by combining a `Geometry` (which defines its structure/shape) and a `Material` (which defines its appearance, like color and texture)."
+    }
+  },
+  {
+    "id": "threejs-easy-lighting-003",
+    "title": "Basic Lighting",
+    "difficulty": "easy",
+    "framework": "Three.js",
+    "frameworkIconText": "3D",
+    "tags": [
+      "threejs",
+      "lighting",
+      "AmbientLight",
+      "DirectionalLight",
+      "MeshStandardMaterial"
+    ],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "For materials other than `MeshBasicMaterial` to be visible and show shading, you need to add lights to your scene. Common lights include `AmbientLight` (global, non-directional light) and `DirectionalLight` (like sunlight)."
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "code": "// Assume scene, camera, renderer are set up\n\n// Use a material that reacts to light\nconst geometry = new THREE.BoxGeometry(1, 1, 1);\nconst material = new THREE.MeshStandardMaterial({ color: 0x0077ff }); // Blue, reacts to light\nconst cube = new THREE.Mesh(geometry, material);\nscene.add(cube);\n\n// Add an ambient light (illuminates all objects equally)\nconst ambientLight = new THREE.AmbientLight(0xffffff, 0.5); // color, intensity\nscene.add(ambientLight);\n\n// Add a directional light (like sunlight)\nconst directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);\ndirectionalLight.position.set(1, 2, 3); // x, y, z position of the light source\nscene.add(directionalLight);\n\ncamera.position.z = 3;\n\n// Animation loop\n// function animate() {\n//   requestAnimationFrame(animate);\n//   cube.rotation.x += 0.01;\n//   renderer.render(scene, camera);\n// }\n// animate();"
+      },
+      {
+        "type": "explanation",
+        "text": "`MeshStandardMaterial` is a physically based rendering material that reacts to lights. `AmbientLight` provides a base level of light from all directions. `DirectionalLight` shines from a specific direction. Both are added to the `scene`."
+      }
+    ],
+    "quiz": {
+      "snippet": "// const material = new THREE.MeshBasicMaterial({ color: 0xff0000 });\n// const light = new THREE.DirectionalLight(0xffffff, 1);\n// scene.add(light);",
+      "questionText": "If you are using `THREE.MeshBasicMaterial` for an object, will adding a `DirectionalLight` to the scene affect its appearance?",
+      "options": [
+        "Yes, it will become brighter.",
+        "Yes, it will cast a shadow.",
+        "No, `MeshBasicMaterial` is not affected by lights.",
+        "It will change the object's color to white."
+      ],
+      "correctOptionIndex": 2,
+      "explanationAfterAnswer": "`THREE.MeshBasicMaterial` is a simple material that renders objects with a flat color or texture, and it does not react to lights in the scene. To see lighting effects, you need to use materials like `MeshStandardMaterial` or `MeshPhongMaterial`."
+    }
+  },
+  {
+    "id": "threejs-easy-camera-position-lookat-004",
+    "title": "Camera Positioning and `lookAt`",
+    "difficulty": "easy",
+    "framework": "Three.js",
+    "frameworkIconText": "3D",
+    "tags": ["threejs", "camera", "position", "lookAt", "scene navigation"],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "The camera's position determines your viewpoint in the 3D scene. The `camera.position.set(x, y, z)` method is used to place the camera. The `camera.lookAt(vector3)` method makes the camera point towards a specific coordinate or object's position."
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "code": "// Assume scene, renderer are set up\n// Assume a cube is added to the scene at (0,0,0)\n// const cube = new THREE.Mesh(new THREE.BoxGeometry(), new THREE.MeshBasicMaterial({color: 0xff0000}));\n// scene.add(cube);\n\nconst camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);\n\n// Position the camera\ncamera.position.x = 2;\ncamera.position.y = 3;\ncamera.position.z = 5;\n\n// Make the camera look at the center of the scene (or the cube's position)\ncamera.lookAt(0, 0, 0); // or camera.lookAt(cube.position);\n\n// renderer.render(scene, camera);"
+      },
+      {
+        "type": "explanation",
+        "text": "`camera.position.set(x, y, z)` or setting `camera.position.x`, `y`, `z` individually moves the camera. `camera.lookAt(targetVector)` orients the camera to face the specified `THREE.Vector3` point. This is essential for framing your scene."
+      }
+    ],
+    "quiz": {
+      "snippet": "camera.position.set(10, 5, 15);\ncamera.lookAt(0, 0, 0);",
+      "questionText": "What does `camera.lookAt(0, 0, 0)` instruct the camera to do?",
+      "options": [
+        "Move the camera to the coordinates (0,0,0).",
+        "Set the camera's field of view to 0.",
+        "Orient the camera so that it is pointing towards the scene's origin (0,0,0).",
+        "Zoom the camera in on the origin."
+      ],
+      "correctOptionIndex": 2,
+      "explanationAfterAnswer": "The `camera.lookAt(target)` method orients the camera to face the 3D point specified by `target`. In this case, `camera.lookAt(0, 0, 0)` makes the camera point towards the origin of the scene."
+    }
+  },
+  {
+    "id": "threejs-easy-animation-loop-005",
+    "title": "Basic Animation Loop (`requestAnimationFrame`)",
+    "difficulty": "easy",
+    "framework": "Three.js",
+    "frameworkIconText": "3D",
+    "tags": ["threejs", "animation", "requestAnimationFrame", "rendering loop"],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "To create animations in Three.js, you typically use a render loop. The `requestAnimationFrame` browser API is used to call a function repeatedly (ideally 60 times per second), where you can update object properties (like position or rotation) and then re-render the scene."
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "code": "// Assume scene, camera, renderer, and a 'cube' mesh are set up\n// scene.add(cube);\n// camera.position.z = 5;\n\nfunction animate() {\n  // Schedule the next frame\n  requestAnimationFrame(animate);\n\n  // Update object properties for animation\n  if (typeof cube !== 'undefined') { // Check if cube exists\n    cube.rotation.x += 0.01;\n    cube.rotation.y += 0.005;\n  }\n\n  // Render the scene\n  renderer.render(scene, camera);\n}\n\n// Start the animation loop if a renderer exists\nif (typeof renderer !== 'undefined') {\n    animate();\n} else {\n    console.error('Renderer not initialized for animation loop.');\n}"
+      },
+      {
+        "type": "explanation",
+        "text": "The `animate` function calls `requestAnimationFrame(animate)` to schedule itself for the next frame, creating a loop. Inside the loop, `cube.rotation.x` and `cube.rotation.y` are incremented slightly on each frame, making the cube rotate. `renderer.render(scene, camera)` then draws the updated scene."
+      }
+    ],
+    "quiz": {
+      "snippet": "function gameLoop() {\n  requestAnimationFrame(gameLoop);\n  // updateGameObjects();\n  // renderer.render(scene, camera);\n}",
+      "questionText": "What is the primary purpose of `requestAnimationFrame(callback)` in a Three.js animation loop?",
+      "options": [
+        "To pause the animation for a specified number of frames.",
+        "To tell the browser that you wish to perform an animation and requests that the browser schedule a repaint of the window for the next animation frame.",
+        "To set the frame rate of the animation to a fixed value.",
+        "To load 3D models asynchronously."
+      ],
+      "correctOptionIndex": 1,
+      "explanationAfterAnswer": "`requestAnimationFrame(callback)` is a browser API that tells the browser you wish to perform an animation and requests that the browser call a specified function to update an animation before the next repaint. This creates a smooth, optimized rendering loop."
+    }
+  },
+  {
+    "id": "pixijs-easy-app-sprite-001",
+    "title": "Basic PixiJS App & Displaying a Sprite",
+    "difficulty": "easy",
+    "framework": "PixiJS",
+    "frameworkIconText": "Pixi",
+    "tags": [
+      "pixijs",
+      "application",
+      "sprite",
+      "texture",
+      "stage",
+      "2d rendering"
+    ],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "PixiJS is a fast and flexible 2D rendering engine. To start, you create a `PIXI.Application` which handles the renderer, ticker (game loop), and root container (`stage`). Sprites are used to display images."
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "code": "// Basic HTML: <body style=\"margin:0;\"><script src=\"https://cdnjs.cloudflare.com/ajax/libs/pixi.js/7.x.x/pixi.min.js\"></script></body>\n// (Replace 7.x.x with the latest PixiJS version)\n\n// 1. Create a Pixi Application\nconst app = new PIXI.Application({\n  width: 800,         // default: 800\n  height: 600,        // default: 600\n  backgroundColor: 0x1099bb, // light blue background\n  // resolution: window.devicePixelRatio || 1, // for crisp rendering on high DPI displays\n  // autoDensity: true, // automatically set resolution based on devicePixelRatio\n});\ndocument.body.appendChild(app.view); // Add the canvas to the DOM (app.view is the canvas element)\n\n// 2. Load an image texture and create a Sprite\n// (Ensure you have an image, e.g., 'assets/bunny.png')\nPIXI.Assets.load('assets/bunny.png').then((texture) => {\n  // This creates a new Sprite from the loaded texture\n  const bunny = new PIXI.Sprite(texture);\n\n  // Center the sprite's anchor point\n  bunny.anchor.set(0.5);\n\n  // Move the sprite to the center of the screen\n  bunny.x = app.screen.width / 2;\n  bunny.y = app.screen.height / 2;\n\n  // Add the sprite to the stage (root container)\n  app.stage.addChild(bunny);\n\n  // Optional: Add a ticker for animation\n  app.ticker.add((delta) => {\n    // bunny.rotation += 0.01 * delta; // Rotate the bunny\n  });\n});"
+      },
+      {
+        "type": "explanation",
+        "text": "A `PIXI.Application` creates a canvas and a `stage` where all display objects are added. `PIXI.Assets.load()` is used to load image textures. A `PIXI.Sprite` is created from a texture and then added to the `app.stage`. The `anchor` property of a sprite determines its origin point for transformations (0.5, 0.5 is the center)."
+      }
+    ],
+    "quiz": {
+      "snippet": "const app = new PIXI.Application({ backgroundColor: 0xff0000 });\ndocument.body.appendChild(app.view);\nconst texture = await PIXI.Assets.load('myImage.png');\nconst imageSprite = new PIXI.Sprite(texture);\n// How do you make 'imageSprite' visible on the screen?",
+      "questionText": "After creating a `PIXI.Sprite`, what is the typical next step to make it visible in a PixiJS application?",
+      "options": [
+        "Call `imageSprite.render()`",
+        "Add it to the `PIXI.Assets` cache",
+        "Add it as a child to the `app.stage` (e.g., `app.stage.addChild(imageSprite)`)",
+        "Set `imageSprite.visible = true` (it's true by default but doesn't make it render alone)"
+      ],
+      "correctOptionIndex": 2,
+      "explanationAfterAnswer": "To make a display object like a `PIXI.Sprite` visible, it needs to be added to the scene graph. The root of the scene graph in a PixiJS application is `app.stage`. You use `app.stage.addChild(yourSprite)`."
+    }
+  },
+  {
+    "id": "pixijs-easy-basic-shapes-graphics-002",
+    "title": "Drawing Basic Shapes with `PIXI.Graphics`",
+    "difficulty": "easy",
+    "framework": "PixiJS",
+    "frameworkIconText": "Pixi",
+    "tags": ["pixijs", "graphics", "shapes", "drawing", "vector graphics"],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "The `PIXI.Graphics` class allows you to draw vector shapes like rectangles, circles, lines, and polygons directly onto the stage. You use methods like `beginFill()`, `drawRect()`, `drawCircle()`, and `endFill()`."
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "code": "// Assume 'app' (PIXI.Application instance) is already created and added to DOM\n\n// Create a new Graphics object\nconst rectangle = new PIXI.Graphics();\n\n// Set a fill color and alpha\nrectangle.beginFill(0xFF3300, 0.8); // Red color, 80% opacity\n// Draw a rectangle (x, y, width, height)\nrectangle.drawRect(50, 50, 100, 100);\nrectangle.endFill();\n\n// Add a line style (optional)\nrectangle.lineStyle(4, 0x0000FF, 1); // width, color, alpha\nrectangle.drawRect(50, 50, 100, 100); // Redraw with border\n\n// Position the rectangle\nrectangle.x = 50;\nrectangle.y = 50;\n\n// Add it to the stage\napp.stage.addChild(rectangle);\n\n// Draw a circle\nconst circle = new PIXI.Graphics();\ncircle.beginFill(0x00FF00); // Green\ncircle.drawCircle(0, 0, 30); // cx, cy, radius (relative to circle's x,y)\ncircle.endFill();\ncircle.x = 250;\ncircle.y = 100;\napp.stage.addChild(circle);"
+      },
+      {
+        "type": "explanation",
+        "text": "You create a `PIXI.Graphics` object. Use `beginFill(color, alpha)` to set the fill. Drawing methods like `drawRect(x, y, width, height)` or `drawCircle(cx, cy, radius)` define the shape. `endFill()` completes the filled shape. `lineStyle()` can be used to add borders. Finally, add the graphics object to the stage."
+      }
+    ],
+    "quiz": {
+      "snippet": "const shape = new PIXI.Graphics();\nshape.beginFill(0x0000FF); // Blue\n// Which method would you use to draw a filled circle?\nshape.endFill();",
+      "questionText": "Which `PIXI.Graphics` method is used to draw a circle?",
+      "options": [
+        "shape.makeCircle()",
+        "shape.drawCircle()",
+        "shape.circle()",
+        "shape.renderCircle()"
+      ],
+      "correctOptionIndex": 1,
+      "explanationAfterAnswer": "The `drawCircle(x, y, radius)` method of a `PIXI.Graphics` object is used to draw a circle. The x and y coordinates are relative to the Graphics object's position."
+    }
+  },
+  {
+    "id": "pixijs-easy-text-003",
+    "title": "Displaying Text with `PIXI.Text`",
+    "difficulty": "easy",
+    "framework": "PixiJS",
+    "frameworkIconText": "Pixi",
+    "tags": ["pixijs", "text", "fonts", "styling", "PIXI.Text"],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "To display text in PixiJS, you use the `PIXI.Text` object. You can specify the text string and a style object to control font, size, color, alignment, etc."
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "code": "// Assume 'app' (PIXI.Application instance) is already created\n\nconst basicText = new PIXI.Text('Hello Pixi!');\nbasicText.x = 50;\nbasicText.y = 50;\napp.stage.addChild(basicText);\n\nconst style = new PIXI.TextStyle({\n  fontFamily: 'Arial',\n  fontSize: 36,\n  fontStyle: 'italic',\n  fontWeight: 'bold',\n  fill: ['#ffffff', '#00ff99'], // gradient\n  stroke: '#4a1850',\n  strokeThickness: 5,\n  dropShadow: true,\n  dropShadowColor: '#000000',\n  dropShadowBlur: 4,\n  dropShadowAngle: Math.PI / 6,\n  dropShadowDistance: 6,\n});\n\nconst styledText = new PIXI.Text('Styled Text', style);\nstyledText.x = 50;\nstyledText.y = 150;\napp.stage.addChild(styledText);"
+      },
+      {
+        "type": "explanation",
+        "text": "Create a `PIXI.Text` object, passing the text string and an optional `PIXI.TextStyle` object. The style object defines various properties like font, size, fill color, stroke, and drop shadow. The text object is then added to the stage."
+      }
+    ],
+    "quiz": {
+      "snippet": "const myStyle = new PIXI.TextStyle({ fontSize: 24, fill: 'red' });\nconst label = new PIXI.Text('Score: 100', myStyle);",
+      "questionText": "What is the primary way to define the appearance (font, size, color) of a `PIXI.Text` object?",
+      "options": [
+        "Using CSS classes applied to the canvas.",
+        "By setting individual properties like `label.font` and `label.color`.",
+        "By passing a `PIXI.TextStyle` object as the second argument to the `PIXI.Text` constructor.",
+        "Using HTML tags within the text string."
+      ],
+      "correctOptionIndex": 2,
+      "explanationAfterAnswer": "The appearance of `PIXI.Text` is controlled by a `PIXI.TextStyle` object, which is passed as the second argument to the `PIXI.Text` constructor. This object contains properties for font family, size, fill color, stroke, etc."
+    }
+  },
+  {
+    "id": "pixijs-easy-interaction-events-004",
+    "title": "Basic Interaction: Click Events on Sprites",
+    "difficulty": "easy",
+    "framework": "PixiJS",
+    "frameworkIconText": "Pixi",
+    "tags": [
+      "pixijs",
+      "interaction",
+      "events",
+      "click",
+      "pointerdown",
+      "interactive"
+    ],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "PixiJS display objects can be made interactive to respond to mouse or touch events. You need to set the `interactive` property to `true` and then listen for events like `pointerdown` (which covers click and touch start)."
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "code": "// Assume 'app' and a 'bunny' sprite are already created and added to stage\n// PIXI.Assets.load('assets/bunny.png').then((texture) => { \n//   const bunny = new PIXI.Sprite(texture);\n//   bunny.x = app.screen.width / 2; bunny.y = app.screen.height / 2;\n//   bunny.anchor.set(0.5);\n//   app.stage.addChild(bunny);\n\n  // Make the bunny interactive\n  bunny.interactive = true;\n  // Make the bunny appear as a button on hover\n  bunny.cursor = 'pointer'; // or 'button'\n\n  // Add a click/tap listener\n  bunny.on('pointerdown', () => {\n    console.log('Bunny clicked!');\n    bunny.scale.x *= 1.25;\n    bunny.scale.y *= 1.25;\n  });\n\n  // You can also use .on('click', handler) or .on('tap', handler)\n  // which are higher-level events built on top of pointer events.\n// });"
+      },
+      {
+        "type": "explanation",
+        "text": "Set `sprite.interactive = true` to enable event detection. Then, use `sprite.on('eventName', handlerFunction)` to listen for events. `pointerdown` is a common event for clicks/taps. Inside the handler, you can change the sprite's properties, like its scale."
+      }
+    ],
+    "quiz": {
+      "snippet": "const interactiveSprite = new PIXI.Sprite(someTexture);\n// What property must be set on 'interactiveSprite' to enable event listeners like 'pointerdown'?",
+      "questionText": "Which property of a PixiJS display object must be set to `true` to make it respond to pointer events like 'click' or 'pointerdown'?",
+      "options": ["clickable", "eventEnabled", "interactive", "listenPointer"],
+      "correctOptionIndex": 2,
+      "explanationAfterAnswer": "To enable a PixiJS display object (like a Sprite) to detect and respond to pointer events (mouse or touch), its `interactive` property must be set to `true`."
+    }
+  },
+  {
+    "id": "pixijs-easy-containers-005",
+    "title": "Grouping Objects with `PIXI.Container`",
+    "difficulty": "easy",
+    "framework": "PixiJS",
+    "frameworkIconText": "Pixi",
+    "tags": [
+      "pixijs",
+      "container",
+      "grouping",
+      "scene graph",
+      "transformations"
+    ],
+    "type": "lesson_and_quiz",
+    "lessonContent": [
+      {
+        "type": "paragraph",
+        "text": "`PIXI.Container` is a fundamental display object that can hold other display objects (like Sprites, Graphics, or other Containers) as children. This allows you to group objects together and transform them (move, scale, rotate) as a single unit."
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "code": "// Assume 'app' is created\n\nconst container = new PIXI.Container();\napp.stage.addChild(container);\n\n// Create some sprites\n// const texture = await PIXI.Assets.load('myImage.png');\n// const sprite1 = new PIXI.Sprite(texture);\n// const sprite2 = new PIXI.Sprite(texture);\n\n// For example, let's use Graphics objects\nconst circle1 = new PIXI.Graphics().beginFill(0xff0000).drawCircle(0, 0, 20).endFill();\nconst circle2 = new PIXI.Graphics().beginFill(0x00ff00).drawCircle(50, 0, 20).endFill();\n\n// Add sprites/graphics to the container\ncontainer.addChild(circle1);\ncontainer.addChild(circle2);\n\n// Now, transformations on the container affect all its children\ncontainer.x = 100;\ncontainer.y = 100;\n// container.rotation = Math.PI / 4; // Rotate the whole group\n// container.scale.set(1.5); // Scale the whole group\n\n// To make children visible, the container (and its parents) must be on the stage.\n// app.ticker.add(() => { container.rotation += 0.01; });"
+      },
+      {
+        "type": "explanation",
+        "text": "You create a `PIXI.Container` and add it to the stage (or another container). Then, you add other display objects as children to this container using `container.addChild()`. Any transformations (position, scale, rotation) applied to the container will also apply to all its children relative to the container's origin."
+      }
+    ],
+    "quiz": {
+      "snippet": "const parentContainer = new PIXI.Container();\nconst childSprite1 = new PIXI.Sprite(texture1);\nconst childSprite2 = new PIXI.Sprite(texture2);\nparentContainer.addChild(childSprite1);\nparentContainer.addChild(childSprite2);\nparentContainer.x = 50;",
+      "questionText": "If `parentContainer.x` is set to 50, and `childSprite1` was originally at x=10 relative to the container, what will be `childSprite1`'s effective x-position on the stage (assuming parentContainer is at x=0 initially on stage)?",
+      "options": ["10", "50", "60", "40"],
+      "correctOptionIndex": 2,
+      "explanationAfterAnswer": "Child object positions are relative to their parent container. If the container moves to x=50, and a child was at x=10 within that container, its new global x-position will be 50 (container's x) + 10 (child's relative x) = 60."
+    }
+  }
+]
