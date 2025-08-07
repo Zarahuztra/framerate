@@ -3,6 +3,7 @@ import React from "react";
 import { X } from "lucide-react";
 
 export default function InfoModal({ content, onClose }) {
+  console.log("InfoModal content:", content);
   if (!content) return null;
 
   return (
