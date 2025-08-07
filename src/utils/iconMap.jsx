@@ -1,9 +1,7 @@
 // Fil: src/utils/iconMap.jsx
-import React from "react"; // Nødvendig hvis du returnerer JSX-elementer
+import React from "react";
 
 // IMPORTER DINE FAKTISKE SVG-IKONER SOM REACT-KOMPONENTER
-// Juster stiene basert på plasseringen av denne filen (src/utils/)
-// i forhold til src/assets/icons/
 import ReactIcon from "../assets/icons/react.svg?react";
 import JavaScriptIcon from "../assets/icons/javascript.svg?react";
 import NextJsIcon from "../assets/icons/next.svg?react";
@@ -20,7 +18,7 @@ import TypescriptIcon from "../assets/icons/typescript.svg?react";
 import CSSIcon from "../assets/icons/css.svg?react";
 import ExpressIcon from "../assets/icons/express.svg?react";
 import NestJSIcon from "../assets/icons/nest.svg?react";
-import NuxtIcon from "../assets/icons/nuxt.svg?react";
+import NuxtIcon from "../assets/icons/nuxt.svg";
 import JsCategoryIcon from "../assets/icons/javascript1.svg?react";
 import CssCategoryIcon from "../assets/icons/css1.svg?react";
 import FrameworkCategoryIcon from "../assets/icons/frame1.svg?react";
@@ -36,33 +34,22 @@ export const IconComponentsMap = {
   JavaScript: JavaScriptIcon,
   React: ReactIcon,
   "Next.js": NextJsIcon,
-  Next: NextJsIcon,
   "Vue.js": VueIcon,
-  Vue: VueIcon,
   Angular: AngularIcon,
   "Node.js": NodeJsIcon,
-  Node: NodeJsIcon,
   Svelte: SvelteIcon,
-  TW: TailwindIcon,
   "Tailwind CSS": TailwindIcon,
   Tailwind: TailwindIcon,
   Bootstrap: BootstrapIcon,
-  BS: BootstrapIcon,
   Bulma: BulmaIcon,
-  "3D": ThreeJsIcon,
   "Three.js": ThreeJsIcon,
-  Three: ThreeJsIcon,
   PixiJS: PixiJsIcon,
-  Pixi: PixiJsIcon,
   TypeScript: TypescriptIcon,
-  TS: TypescriptIcon,
   CSS: CSSIcon,
   "Express.js": ExpressIcon,
   Express: ExpressIcon,
   NestJS: NestJSIcon,
-  Nest: NestJSIcon,
   "Nuxt.js": NuxtIcon,
-  Nuxt: NuxtIcon,
   Default: DefaultIconComponent,
 };
 
@@ -75,16 +62,16 @@ export const allDisplayIcons = [
       "React is a JavaScript library for building user interfaces, especially single-page applications. Used by Facebook, Instagram, and many others, and is very popular for modern web development.",
   },
   {
-    name: "Next",
+    name: "Next.js", // ← matcher dataene dine
     type: "UI Framework",
-    component: IconComponentsMap["Next"],
+    component: IconComponentsMap["Next.js"],
     description:
       "Next.js is a framework for building React applications. Makes it easy to create SEO-friendly and fast websites with server-side rendering and static site generation.",
   },
   {
-    name: "Vue",
+    name: "Vue.js", // ← matcher dataene dine
     type: "UI Framework",
-    component: IconComponentsMap["Vue"],
+    component: IconComponentsMap["Vue.js"],
     description:
       "Vue.js is a popular and lightweight frontend framework for building interactive user interfaces. Simpler than Angular, but very powerful.",
   },
@@ -103,9 +90,9 @@ export const allDisplayIcons = [
       "Svelte is a modern frontend framework where most of the work happens at compile time. The result is super-fast and tiny apps with no runtime overhead.",
   },
   {
-    name: "Nuxt",
+    name: "Nuxt.js", // ← matcher dataene dine hvis du bruker "Nuxt.js"
     type: "UI Framework",
-    component: IconComponentsMap["Nuxt"],
+    component: IconComponentsMap["Nuxt.js"],
     description:
       "Nuxt.js is a framework for building “universal” (server-side rendered) Vue.js applications. Makes it easier to create SEO-friendly and fast Vue-based websites.",
   },
@@ -124,30 +111,30 @@ export const allDisplayIcons = [
       "TypeScript is a superset of JavaScript that adds static typing. Offers better tools, fewer bugs, and more robust apps—especially in larger projects.",
   },
   {
-    name: "Node",
+    name: "Node.js", // ← matcher dataene dine hvis du bruker "Node.js"
     type: "JavaScript",
-    component: IconComponentsMap["Node"],
+    component: IconComponentsMap["Node.js"],
     description:
       "Node.js lets you run JavaScript on the server. Used to build everything from small APIs to large backend systems.",
   },
   {
-    name: "Nest",
+    name: "NestJS",
     type: "JavaScript",
     component: IconComponentsMap["NestJS"],
     description:
       "NestJS is a progressive backend framework for Node.js, built with TypeScript. Inspired by Angular, it provides structure for larger projects with modules, dependency injection, and more.",
   },
   {
-    name: "Express",
+    name: "Express.js", // ← matcher dataene dine hvis du bruker "Express.js"
     type: "JavaScript",
-    component: IconComponentsMap["Express"],
+    component: IconComponentsMap["Express.js"],
     description:
       "Express.js is a minimalist backend framework for Node.js. Used to build APIs and servers. Known for being fast, simple, and flexible.",
   },
   {
-    name: "Tailwind",
+    name: "Tailwind CSS", // ← matcher dataene dine hvis du bruker "Tailwind CSS"
     type: "CSS",
-    component: IconComponentsMap["Tailwind"],
+    component: IconComponentsMap["Tailwind CSS"],
     description:
       "Tailwind CSS is a utility-first CSS framework where you build your design directly in your HTML using small classes. Gives you extreme flexibility, fast prototyping, and a lot of control over styling.",
   },
@@ -173,14 +160,14 @@ export const allDisplayIcons = [
       "CSS (Cascading Style Sheets) is used to style websites—colors, fonts, spacing, animations, and layout. All styling of HTML is done with CSS, either “vanilla” or using frameworks like Bulma, Bootstrap, or Tailwind.",
   },
   {
-    name: "Three",
+    name: "Three.js", // ← matcher dataene dine hvis du bruker "Three.js"
     type: "3D",
-    component: IconComponentsMap["Three"],
+    component: IconComponentsMap["Three.js"],
     description:
       "Three.js is the most popular JavaScript library for creating 3D graphics in the browser. Provides easy access to WebGL and allows you to build advanced 3D scenes, games, and visualizations.",
   },
   {
-    name: "Pixi",
+    name: "PixiJS", // ← matcher dataene dine hvis du bruker "PixiJS"
     type: "3D",
     component: IconComponentsMap["PixiJS"],
     description:
@@ -198,5 +185,5 @@ export {
 export function getFrameworkIconElement(frameworkIconText) {
   const IconComponent =
     IconComponentsMap[frameworkIconText] || IconComponentsMap["Default"];
-  return IconComponent ? <IconComponent /> : null; // Returnerer en instansiert komponent
+  return IconComponent ? <IconComponent /> : null;
 }
