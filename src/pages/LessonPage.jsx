@@ -6,6 +6,9 @@ import LessonViewer from "../components/LessonViewer";
 import InfoModal from "../components/InfoModal"; // 1. NY IMPORT
 import { getFrameworkIconElement, allDisplayIcons } from "../utils/iconMap"; // 2. NY IMPORT
 
+// Normaliserer navn: lowercase, fjerner alle ikke-bokstaver/tall
+const normalize = (str) => (str || "").toLowerCase().replace(/[^a-z0-9]/g, "");
+
 const difficulties = ["easy", "medium", "advanced"];
 
 export default function LessonPage() {
@@ -71,7 +74,8 @@ export default function LessonPage() {
     console.log("Klikk på framework-ikonet!", currentLessonData);
     if (!currentLessonData) return;
     const iconInfo = allDisplayIcons.find(
-      (iconData) => iconData.name === currentLessonData.framework
+      (iconData) =>
+        normalize(iconData.name) === normalize(currentLessonData.framework)
     );
     if (iconInfo) {
       setModalContent({
@@ -80,6 +84,14 @@ export default function LessonPage() {
         description: iconInfo.description,
         iconComponent: <iconInfo.component className="w-16 h-16" />,
       });
+    } else {
+      // Debugg hvis du fortsatt ikke får match!
+      console.log(
+        "Fant IKKE iconInfo for:",
+        currentLessonData.framework,
+        "Alle navn:",
+        allDisplayIcons.map((d) => d.name)
+      );
     }
   };
 

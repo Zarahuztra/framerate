@@ -8,6 +8,9 @@ import BottomNav from "../components/BottomNav";
 import InfoModal from "../components/InfoModal";
 import { getFrameworkIconElement, allDisplayIcons } from "../utils/iconMap";
 
+// Normaliserer navn: lowercase, fjerner alle ikke-bokstaver/tall
+const normalize = (str) => (str || "").toLowerCase().replace(/[^a-z0-9]/g, "");
+
 const difficulties = ["easy", "medium", "advanced"];
 
 export default function QuizPage() {
@@ -109,7 +112,8 @@ export default function QuizPage() {
     console.log("Klikk på framework-ikonet!", currentQuestionData);
     if (!currentQuestionData) return;
     const iconInfo = allDisplayIcons.find(
-      (iconData) => iconData.name === currentQuestionData.framework
+      (iconData) =>
+        normalize(iconData.name) === normalize(currentQuestionData.framework)
     );
     if (iconInfo) {
       setModalContent({
@@ -118,6 +122,14 @@ export default function QuizPage() {
         description: iconInfo.description,
         iconComponent: <iconInfo.component className="w-16 h-16" />,
       });
+    } else {
+      // Debugg hvis du fortsatt ikke får match!
+      console.log(
+        "Fant IKKE iconInfo for:",
+        currentQuestionData.framework,
+        "Alle navn:",
+        allDisplayIcons.map((d) => d.name)
+      );
     }
   };
 
