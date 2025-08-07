@@ -23,10 +23,12 @@ export default function LessonPage() {
     setIsLoading(true);
     setErrorLoading(null);
     try {
-      const module = await import(
-        /* @vite-ignore */ `../data/${difficultyToLoad.toLowerCase()}.json`
+      const response = await fetch(
+        `data/${difficultyToLoad.toLowerCase()}.json`
       );
-      const loadedData = module.default.filter(
+      if (!response.ok) throw new Error("File not found");
+      const loadedDataRaw = await response.json();
+      const loadedData = loadedDataRaw.filter(
         (item) => item.lessonContent?.length > 0
       );
       if (loadedData.length === 0)

@@ -36,10 +36,11 @@ export default function QuizPage() {
       setErrorLoading(null);
       setQuestionsForModeAndDifficulty([]);
       try {
-        const module = await import(
-          /* @vite-ignore */ `../data/${difficultyToLoad.toLowerCase()}.json`
+        const response = await fetch(
+          `data/${difficultyToLoad.toLowerCase()}.json`
         );
-        let loadedData = module.default;
+        if (!response.ok) throw new Error("File not found");
+        let loadedData = await response.json();
         if (!Array.isArray(loadedData))
           throw new Error("Loaded data is not an array.");
         if (currentMode === "quiz") {
