@@ -18,7 +18,7 @@ import TypescriptIcon from "../assets/icons/typescript.svg?react";
 import CSSIcon from "../assets/icons/css.svg?react";
 import ExpressIcon from "../assets/icons/express.svg?react";
 import NestJSIcon from "../assets/icons/nest.svg?react";
-import NuxtIcon from "../assets/icons/nuxt.svg";
+import NuxtIcon from "../assets/icons/nuxt.svg?react";
 import JsCategoryIcon from "../assets/icons/javascript1.svg?react";
 import CssCategoryIcon from "../assets/icons/css1.svg?react";
 import FrameworkCategoryIcon from "../assets/icons/frame1.svg?react";
@@ -32,34 +32,50 @@ const DefaultIconComponent = () => (
 export const IconComponentsMap = {
   JS: JavaScriptIcon,
   JavaScript: JavaScriptIcon,
+  javascript: JavaScriptIcon, // ← ekstra
   React: ReactIcon,
   "Next.js": NextJsIcon,
-  Next: NextJsIcon, // alias
+  Next: NextJsIcon,
+  Next: NextJsIcon,
   "Vue.js": VueIcon,
-  Vue: VueIcon, // alias
+  Vue: VueIcon,
+  vue: VueIcon,
   Angular: AngularIcon,
   "Node.js": NodeJsIcon,
-  Node: NodeJsIcon, // alias
+  Node: NodeJsIcon,
+  node: NodeJsIcon,
   Svelte: SvelteIcon,
   "Tailwind CSS": TailwindIcon,
-  Tailwind: TailwindIcon, // alias
+  Tailwind: TailwindIcon,
+  tailwind: TailwindIcon,
+  "tailwind css": TailwindIcon,
   Bootstrap: BootstrapIcon,
-  Bootstrap: BootstrapIcon,
+  bootstrap: BootstrapIcon,
   Bulma: BulmaIcon,
+  bulma: BulmaIcon,
   "Three.js": ThreeJsIcon,
-  Three: ThreeJsIcon, // alias
+  "three.js": ThreeJsIcon,
+  Three: ThreeJsIcon,
+  three: ThreeJsIcon,
   PixiJS: PixiJsIcon,
-  "Pixi.js": PixiJsIcon, // alias
-  Pixi: PixiJsIcon, // alias
+  "Pixi.js": PixiJsIcon,
+  Pixi: PixiJsIcon,
+  pixi: PixiJsIcon,
   TypeScript: TypescriptIcon,
-  Typescript: TypescriptIcon, // alias (valgfritt)
+  typescript: TypescriptIcon,
+  TS: TypescriptIcon,
+  ts: TypescriptIcon,
   CSS: CSSIcon,
+  css: CSSIcon,
   "Express.js": ExpressIcon,
-  Express: ExpressIcon, // alias
+  Express: ExpressIcon,
+  express: ExpressIcon,
   NestJS: NestJSIcon,
-  Nest: NestJSIcon, // alias
+  Nest: NestJSIcon,
+  nest: NestJSIcon,
   "Nuxt.js": NuxtIcon,
-  Nuxt: NuxtIcon, // alias
+  Nuxt: NuxtIcon,
+  nuxt: NuxtIcon,
   Default: DefaultIconComponent,
 };
 
