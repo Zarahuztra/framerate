@@ -1,7 +1,7 @@
 // Fil: src/components/Header.jsx
 import React from "react";
 import OriginalLogo from "./Logo"; // Din standard logo
-import LogoWithIcon from "./LogoWithIcon"; // Din logo som kan vise et ikon
+import LogoWithIcon from "./logowithicon"; // Din logo som kan vise et ikon
 // import { Link } from "react-router-dom"; // Husk å bytte ut <a> med <Link> fra ditt routing-bibliotek
 
 const navLinks = [
