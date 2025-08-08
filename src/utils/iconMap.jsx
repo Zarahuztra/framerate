@@ -32,50 +32,51 @@ const DefaultIconComponent = () => (
 export const IconComponentsMap = {
   JS: JavaScriptIcon,
   JavaScript: JavaScriptIcon,
-  javascript: JavaScriptIcon, // ← ekstra
   React: ReactIcon,
   "Next.js": NextJsIcon,
   Next: NextJsIcon,
-  Next: NextJsIcon,
   "Vue.js": VueIcon,
   Vue: VueIcon,
-  vue: VueIcon,
   Angular: AngularIcon,
   "Node.js": NodeJsIcon,
   Node: NodeJsIcon,
-  node: NodeJsIcon,
   Svelte: SvelteIcon,
+
+  // Tailwind
   "Tailwind CSS": TailwindIcon,
   Tailwind: TailwindIcon,
-  tailwind: TailwindIcon,
-  "tailwind css": TailwindIcon,
+
+  // Bootstrap + alias
   Bootstrap: BootstrapIcon,
-  bootstrap: BootstrapIcon,
+  BS: BootstrapIcon, // ← for dataene dine
+
   Bulma: BulmaIcon,
-  bulma: BulmaIcon,
+
+  // Three.js + aliaser
   "Three.js": ThreeJsIcon,
-  "three.js": ThreeJsIcon,
   Three: ThreeJsIcon,
-  three: ThreeJsIcon,
+  "3D": ThreeJsIcon,
+  "3D GLSL": ThreeJsIcon, // ← for dataene dine
+
+  // Pixi
   PixiJS: PixiJsIcon,
   "Pixi.js": PixiJsIcon,
   Pixi: PixiJsIcon,
-  pixi: PixiJsIcon,
+
+  // TypeScript
   TypeScript: TypescriptIcon,
-  typescript: TypescriptIcon,
+  Typescript: TypescriptIcon,
   TS: TypescriptIcon,
   ts: TypescriptIcon,
+
   CSS: CSSIcon,
-  css: CSSIcon,
   "Express.js": ExpressIcon,
   Express: ExpressIcon,
-  express: ExpressIcon,
   NestJS: NestJSIcon,
   Nest: NestJSIcon,
-  nest: NestJSIcon,
   "Nuxt.js": NuxtIcon,
   Nuxt: NuxtIcon,
-  nuxt: NuxtIcon,
+
   Default: DefaultIconComponent,
 };
 
