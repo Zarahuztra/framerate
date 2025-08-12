@@ -1,4 +1,5 @@
-First-mobile first/responsive design, Reach, and Tailwind.
+First-mobile first/responsive design, React, and Tailwind.
+
 
 
 
