@@ -1,2 +1,3 @@
-Første mobile-first/responsiv design projekt, inkludert første bruk av React og Tailwind. 
+First mobile first/responsive design, Reach, and Tailwind.
+
 
